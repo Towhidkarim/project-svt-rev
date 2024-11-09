@@ -13,32 +13,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: 'How it this gonna work',
-    answer: 'Somehow!',
+    question: 'When can I start the SVT course?',
+    answer:
+      'You can start anytime that suits you. We offer open enrolments. You will start the day you enrol. ',
     value: 'item-1',
   },
   {
-    question: 'Duis aute irure dolor in reprehenderit in voluptate velit?',
+    question: 'What support will I get with my course?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.',
+      'We employ all of our assessors and they are based at our offices. You will be assigned one Assessor/Tutor throughout the duration of the course so you know who to deal with and build that important rapport. There is no limit to the support you can ask for. This is available via phone, Instant messenger, email and Teams. You will also be able to contact a course advisor and use our Website chat facility. Support is uncapped.',
     value: 'item-2',
   },
   {
-    question:
-      'Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?',
+    question: 'Where are NVQ qualifications recognised?',
     answer:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.',
+      'City & Guilds, IOSH,  ILM, CMI and ProQual are internationally recognised as an institution. They are heavily recognised in the UK, Europe, Middle East and Australia.',
     value: 'item-3',
   },
   {
-    question: 'Excepteur sint occaecat cupidata non proident sunt?',
-    answer: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+    question: 'How long does it take to gain an NVQ Qualification?',
+    answer:
+      'Most candidates complete a course in 3 - 12 months depending on the level. Some in as little as 3 months depending on what time you have available and what evidence you may already have. Should you wish to gain GradIOSH you must complete unit 611 for City & Guilds unless you are an experienced practitioner or have a strong Safety educational background and up to date CPD. ProQual you will need to apply with IOSH for GradIOSH. ',
     value: 'item-4',
   },
   {
-    question:
-      'Enim ad minim veniam, quis nostrud exercitation ullamco laboris?',
-    answer: 'consectetur adipisicing elit. Sint labore.',
+    question: 'Will an Assessor visit my workplace?',
+    answer:
+      'Yes. Towards the end of your course, your Assessor will conduct an onsite observation at your workplace to make sure you are putting into practice what you have been studying. We observe you not the business. This only applies to City & Guilds care courses.',
     value: 'item-5',
   },
 ];

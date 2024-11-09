@@ -27,22 +27,24 @@ export const HeroSection = () => {
           </Badge>
 
           <div className='max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold'>
+            <h1 className='text-md:4xl text-2xl my-2'>Educate Your Future</h1>
             <h1>
               Study with
+              <br />
               <span className='text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text'>
-                Title Here
+                Greenwich Central College
               </span>
             </h1>
           </div>
 
           <p className='max-w-screen-sm mx-auto text-xl text-muted-foreground'>
-            {`We're more than just a tool, we're a community of passionate
-            creators. Get access to exclusive resources, tutorials, and support.`}
+            We provide career-focused training in Health, Business, and
+            Hospitality, guiding learners to the right qualifications.
           </p>
 
           <div className='space-y-4 md:space-y-0 md:space-x-4'>
             <Button className='w-5/6 md:w-1/4 font-bold group/arrow' asChild>
-              <Link href={routes.categories}>
+              <Link href={routes.courses}>
                 Get Started
                 <ArrowRight className='size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform' />
               </Link>
@@ -53,9 +55,7 @@ export const HeroSection = () => {
               variant='secondary'
               className='w-5/6 md:w-1/4 font-bold'
             >
-              <Link href='#' target='_blank'>
-                Learn More
-              </Link>
+              <Link href='#faq'>Learn More</Link>
             </Button>
           </div>
         </div>
@@ -75,11 +75,7 @@ export const HeroSection = () => {
                 width={1200}
                 height={1200}
                 className='w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30'
-                src={
-                  theme === 'light'
-                    ? '/hero-image-light.jpeg'
-                    : '/hero-image-dark.jpeg'
-                }
+                src={'/img1.png'}
                 alt='dashboard'
               />
 
@@ -91,11 +87,7 @@ export const HeroSection = () => {
                 width={1200}
                 height={1200}
                 className='w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30'
-                src={
-                  theme === 'light'
-                    ? '/hero-image-light.jpeg'
-                    : '/hero-image-dark.jpeg'
-                }
+                src={'/img2.jpg'}
                 alt='dashboard'
               />
 

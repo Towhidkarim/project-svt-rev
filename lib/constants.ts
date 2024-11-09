@@ -7,13 +7,13 @@ export const categories = [
 
 export const routes = {
   home: '/',
-  categories: '#',
+  courses: '/courses',
 };
 
 export const contactDetails = {
-  address: '742 Evergreen Terrace, Springfield, IL 62704',
-  phoneNumber: '+1 (234) 567-9910',
-  mail: 'mail@mail.com',
+  address: 'Bellerive House, 3 Muirfield Cres E14 9SZ, London',
+  phoneNumber: '+44 2080669670',
+  mail: 'info@greenwichcentralcollege.com',
 };
 
 export const contactSubjects = [
