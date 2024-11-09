@@ -22,7 +22,7 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ToggleTheme } from './toogle-theme';
-import { categories } from '@/lib/constants';
+import { categories, routes } from '@/lib/constants';
 import { courseCategories } from '@/lib/courseInfo';
 import logoImage from '@/public/gwc-logo.png';
 
@@ -38,19 +38,23 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
-    href: '#testimonials',
+    href: '/#testimonials',
     label: 'Testimonials',
   },
   {
-    href: '#team',
+    href: routes.courses,
+    label: 'Courses',
+  },
+  {
+    href: '/#team',
     label: 'Team',
   },
   {
-    href: '#contact',
+    href: '/#contact',
     label: 'Contact',
   },
   {
-    href: '#faq',
+    href: '/#faq',
     label: 'FAQ',
   },
 ];
@@ -177,17 +181,16 @@ export const Navbar = () => {
               Categories
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className='grid w-[350px] grid-cols-2 gap-5 p-4'>
+              <div className='grid w-[400px] grid-cols-3 gap-5 p-4'>
                 {courseCategories.map((item, index) => (
                   <Link
                     href={`/courses?cat=${item}`}
                     key={index}
                     className='rounded-md p-3 text-sm hover:bg-muted'
                   >
-                    <p className='mb-1 capitalize font-semibold leading-none text-foreground'>
+                    <p className='mb-1 tracking-wide leading-5 capitalize font-semibold text-foreground'>
                       {item}
                     </p>
-                    <p className='line-clamp-2 text-muted-foreground'>{``}</p>
                   </Link>
                 ))}
               </div>
@@ -208,16 +211,6 @@ export const Navbar = () => {
 
       <div className='hidden lg:flex'>
         <ToggleTheme />
-
-        <Button asChild size='sm' variant='ghost' aria-label='View on GitHub'>
-          <Link
-            aria-label='View on GitHub'
-            href='https://github.com/nobruf/shadcn-landing-page.git'
-            target='_blank'
-          >
-            <Github className='size-5' />
-          </Link>
-        </Button>
       </div>
     </header>
   );

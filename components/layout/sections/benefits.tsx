@@ -45,7 +45,7 @@ export const BenefitsSection = () => {
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>
             Your Shortcut to Success
           </h2>
-          <p className='text-lg text-muted-foreground mb-8'>
+          <div className='text-lg text-muted-foreground mb-8'>
             <ul className='list-disc flex flex-col gap-4'>
               <li>
                 We provide short courses, Apprenticeships and Functional
@@ -65,7 +65,7 @@ export const BenefitsSection = () => {
                 courses for their career paths
               </li>
             </ul>
-          </p>
+          </div>
         </div>
 
         <div className='grid lg:grid-cols-2 gap-4 w-full'>

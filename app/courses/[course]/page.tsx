@@ -33,7 +33,7 @@ export default function Page({
     <>
       <div className='container flex md:flex-row flex-col gap-10 py-24 sm:py-12'>
         <div className='w-full md:w-3/5 py-12 shadow-lg border border-muted p-5 rounded-lg'>
-          <h1 className='text-2xl md:text-3xl font-semibold max-w-[30ch]'>
+          <h1 className='text-2xl md:text-3xl font-semibold '>
             {currentCourseInfo.title}
           </h1>
           <h2 className='text-2xl text-muted-foreground md:text-xl font-semibold'>
@@ -113,10 +113,10 @@ export default function Page({
             <p>{currentCourseInfo.entryRequirements}</p>
           </div>
         </div>
-        <div className='flex flex-col md:w-2/5 w-full gap-5 py-12'>
+        <div className='flex flex-col md:w-1/5 w-full gap-5 py-12'>
           <Card
             className={
-              'drop-shadow-xl w-[300px] h-fit shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary'
+              'sticky drop-shadow-xl w-[350px] h-fit shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary'
             }
           >
             <CardHeader>
