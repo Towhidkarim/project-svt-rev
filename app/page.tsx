@@ -42,8 +42,8 @@ export default function Home() {
       <TeamSection />
       {/* <CommunitySection /> */}
       {/* <PricingSection /> */}
-      <ContactSection />
-      <FAQSection />
+      {/* <ContactSection /> */}
+      {/* <FAQSection /> */}
       <FooterSection />
     </>
   );
