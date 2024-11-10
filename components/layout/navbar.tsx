@@ -126,7 +126,9 @@ export const Navbar = () => {
                     variant='ghost'
                     className='justify-start text-base'
                   >
-                    <Link href={href}>{label}</Link>
+                    <Link href={href} prefetch>
+                      {label}
+                    </Link>
                   </Button>
                 ))}
               </div>
@@ -200,7 +202,7 @@ export const Navbar = () => {
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} className='text-base px-2'>
+                <Link href={href} className='text-base px-2' prefetch>
                   {label}
                 </Link>
               </NavigationMenuLink>
