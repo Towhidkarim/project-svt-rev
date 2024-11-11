@@ -1,6 +1,10 @@
 export const courseCategories = [
   'Security Courses',
   'Functional Skills',
+  'Health and Social Care ',
+  'Business Course',
+  'SERU Course',
+  'Construction Course',
   'Vocational Courses',
 ] as const;
 

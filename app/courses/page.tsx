@@ -28,6 +28,7 @@ export default function Page({
           {courseCategories.map((item, index) => (
             <Button
               key={index}
+              size='sm'
               variant={param === item ? 'default' : 'outline'}
             >
               <Link href={`/courses?cat=${item}`}>{item}</Link>
@@ -60,6 +61,13 @@ export default function Page({
             </div>
           ))}
         </div>
+        {currentCourse.length === 0 ? (
+          <h1 className='text-center text-lg opacity-70'>
+            No course available from this category yet
+          </h1>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );

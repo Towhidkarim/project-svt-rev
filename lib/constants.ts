@@ -8,6 +8,8 @@ export const categories = [
 export const routes = {
   home: '/',
   courses: '/courses',
+  contact: '/contact',
+  faq: '/faq',
 };
 
 export const contactDetails = {

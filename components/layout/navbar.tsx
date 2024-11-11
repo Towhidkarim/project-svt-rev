@@ -83,7 +83,7 @@ export const Navbar = () => {
       <Link href='/' className='font-bold text-lg flex items-center'>
         {/* <ChevronsDown className='bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white' /> */}
         <Image
-          className='rounded-lg w-14 h-auto mr-2  text-white'
+          className=' w-14 h-auto mr-2  text-white'
           src={logoImage}
           alt='logo'
         />
@@ -155,7 +155,7 @@ export const Navbar = () => {
                 <Image
                   src={logoImage}
                   alt='logo'
-                  className='h-full w-full rounded-md object-cover'
+                  className='h-full w-full rounded-md object-contain'
                   width={600}
                   height={600}
                 />

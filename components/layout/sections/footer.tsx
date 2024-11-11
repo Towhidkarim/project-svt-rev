@@ -3,6 +3,7 @@ import { ChevronsDownIcon } from 'lucide-react';
 import Image from 'next/image';
 import logoImage from '@/public/gwc-logo.png';
 import Link from 'next/link';
+import { routes } from '@/lib/constants';
 
 export const FooterSection = () => {
   return (
@@ -66,19 +67,25 @@ export const FooterSection = () => {
           <div className='flex flex-col gap-2'>
             <h3 className='font-bold text-lg'>Help</h3>
             <div>
-              <Link href='#' className='opacity-60 hover:opacity-100'>
+              <Link
+                href={routes.contact}
+                className='opacity-60 hover:opacity-100'
+              >
                 Contact Us
               </Link>
             </div>
 
             <div>
-              <Link href='#' className='opacity-60 hover:opacity-100'>
+              <Link href={routes.faq} className='opacity-60 hover:opacity-100'>
                 FAQ
               </Link>
             </div>
 
             <div>
-              <Link href='#' className='opacity-60 hover:opacity-100'>
+              <Link
+                href={routes.contact}
+                className='opacity-60 hover:opacity-100'
+              >
                 Feedback
               </Link>
             </div>
