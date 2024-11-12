@@ -4,6 +4,9 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Navbar } from '@/components/layout/navbar';
 import { ThemeProvider } from '@/components/layout/theme-provider';
+import { FooterSection } from '@/components/layout/sections/footer';
+import ChatButton from '@/components/layout/chat-button';
+import { CartProvider } from '@/lib/cart-context';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -25,9 +28,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
+          <CartProvider>
+            <Navbar />
 
-          {children}
+            {children}
+            <ChatButton />
+            <FooterSection />
+          </CartProvider>
         </ThemeProvider>
       </body>
     </html>

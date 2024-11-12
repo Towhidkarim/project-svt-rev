@@ -1,6 +1,7 @@
 'use client';
 
 import { Icon } from '@/components/ui/icon';
+import { courseInfo } from '@/lib/courseInfo';
 import { Marquee } from '@devnomic/marquee';
 import '@devnomic/marquee/dist/index.css';
 import { icons } from 'lucide-react';
@@ -43,9 +44,7 @@ const sponsors: sponsorsProps[] = [
 export const SponsorsSection = () => {
   return (
     <section id='sponsors' className='max-w-[75%] mx-auto pb-24 sm:pb-32'>
-      <h2 className='text-lg md:text-xl text-center mb-6'>
-        Our Platinum Sponsors
-      </h2>
+      <h2 className='text-lg md:text-xl text-center mb-6'>Courses We Offer</h2>
 
       <div className='mx-auto'>
         <Marquee
@@ -54,18 +53,12 @@ export const SponsorsSection = () => {
           innerClassName='gap-[3rem]'
           pauseOnHover
         >
-          {sponsors.map(({ icon, name }) => (
+          {courseInfo.map((item, index) => (
             <div
-              key={name}
+              key={index}
               className='flex items-center text-xl md:text-2xl font-medium'
             >
-              <Icon
-                name={icon as keyof typeof icons}
-                size={32}
-                color='white'
-                className='mr-2'
-              />
-              {name}
+              {item.title}
             </div>
           ))}
         </Marquee>

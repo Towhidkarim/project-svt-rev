@@ -12,6 +12,9 @@ export const routes = {
   faq: '/faq',
 };
 
+//in international format
+export const whatsappPhoneNumber = '8801777777777';
+
 export const contactDetails = {
   address: 'Bellerive House, 3 Muirfield Cres E14 9SZ, London',
   phoneNumber: '+44 2080669670',

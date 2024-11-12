@@ -1,5 +1,5 @@
 'use client';
-import { ChevronsDown, Github, Menu } from 'lucide-react';
+import { ChevronsDown, Github, Menu, ShoppingCart } from 'lucide-react';
 import React from 'react';
 import {
   Sheet,
@@ -25,6 +25,7 @@ import { ToggleTheme } from './toogle-theme';
 import { categories, routes } from '@/lib/constants';
 import { courseCategories } from '@/lib/courseInfo';
 import logoImage from '@/public/gwc-logo.png';
+import CartButton from './cart-button';
 
 interface RouteProps {
   href: string;
@@ -87,10 +88,10 @@ export const Navbar = () => {
           src={logoImage}
           alt='logo'
         />
-        Greenwich Central
       </Link>
       {/* <!-- Mobile --> */}
-      <div className='flex items-center lg:hidden'>
+      <div className='flex items-center gap-3 lg:hidden'>
+        <CartButton className='xl:hidden' />
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Menu
@@ -146,7 +147,7 @@ export const Navbar = () => {
       {/* <!-- Desktop --> */}
       <NavigationMenu className='hidden lg:block mx-auto'>
         <NavigationMenuList>
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <NavigationMenuTrigger className='bg-card text-base'>
               Features
             </NavigationMenuTrigger>
@@ -176,11 +177,11 @@ export const Navbar = () => {
                 </ul>
               </div>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
 
           <NavigationMenuItem>
             <NavigationMenuTrigger className='bg-card text-base'>
-              Categories
+              Courses
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className='grid w-[400px] grid-cols-3 gap-5 p-4'>
@@ -210,8 +211,8 @@ export const Navbar = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-
-      <div className='hidden lg:flex'>
+      <CartButton className='hidden lg:block' />
+      <div className='hidden lg:flex justify-center items-center gap-5'>
         <ToggleTheme />
       </div>
     </header>

@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { contactDetails } from '@/lib/constants';
 import { FooterSection } from '@/components/layout/sections/footer';
 import { ContactSection } from '@/components/layout/sections/contact';
+import PurchaseSection from './purchase-section';
 
 export default function Page({
   params,
@@ -145,8 +146,13 @@ export default function Page({
               </div>
             </CardContent>
 
-            <CardFooter>
+            <CardFooter className='flex flex-col gap-2'>
               <Button className='w-full'>Purchase Now</Button>
+              <PurchaseSection
+                id={currentCourseInfo.courseUniqueId}
+                price={currentCourseInfo.priceInCurrency}
+                title={currentCourseInfo.title}
+              />
             </CardFooter>
           </Card>
           <div className='drop-shadow-xl rounded-lg my-8 py-5 w-[300px] h-fit flex flex-col justify-center items-center shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary'>
@@ -157,7 +163,6 @@ export default function Page({
         </div>
       </div>
       <ContactSection />
-      <FooterSection />
     </>
   );
 }
