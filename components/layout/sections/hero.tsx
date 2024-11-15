@@ -94,7 +94,7 @@ export const HeroSection = () => {
                   src={item.imageUrl}
                   alt='dashboard'
                 />
-                <div className='absolute bg-gradient-to-t min-h-44 text-ellipsis line-clamp-4 from-white to-transparent bottom-0'>
+                <div className='absolute bg-gradient-to-t min-h-44 text-ellipsis line-clamp-4 light:from-white to-transparent bottom-0'>
                   <div className='font-semibold text-lg  my-3 overflow-hidden'>
                     {item.title}
                   </div>
