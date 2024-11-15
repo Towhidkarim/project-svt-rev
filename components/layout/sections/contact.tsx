@@ -28,6 +28,9 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { contactDetails, contactSubjects } from '@/lib/constants';
+import SendContactInfoAction from '@/lib/actions';
+import { toast } from 'sonner';
+import { useState } from 'react';
 
 const formSchema = z.object({
   firstName: z.string().min(2).max(255),
@@ -44,18 +47,31 @@ export const ContactSection = () => {
       firstName: '',
       lastName: '',
       email: '',
-      subject: 'Web Development',
+      subject: '',
       message: '',
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const [isLoading, setIsLoading] = useState(false);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     const { firstName, lastName, email, subject, message } = values;
-    console.log(values);
 
-    const mailToLink = `mailto:leomirandadev@gmail.com?subject=${subject}&body=Hello I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
+    const response = await SendContactInfoAction({
+      firstName,
+      lastName,
+      email,
+      subject,
+      message,
+    });
+    setIsLoading(true);
+    if (response.ok) {
+      toast("Sent Succesfully, We'll get back to you soon!");
+    } else toast('Something Went Wrong, please try again');
+    setIsLoading(false);
 
-    window.location.href = mailToLink;
+    // const mailToLink = `mailto:leomirandadev@gmail.com?subject=${subject}&body=Hello I am ${firstName} ${lastName}, my Email is ${email}. %0D%0A${message}`;
+    // await SendContactInfoAction();
+    // window.location.href = mailToLink;
   }
 
   return (
@@ -180,23 +196,7 @@ export const ContactSection = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Subject</FormLabel>
-                        <Select
-                          onValueChange={field.onChange}
-                          defaultValue={field.value}
-                        >
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder='Select a subject' />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            {contactSubjects.map((item, index) => (
-                              <SelectItem key={index} value='Option One'>
-                                {item}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
+                        <Input type='text' placeholder='Subject' {...field} />
                         <FormMessage />
                       </FormItem>
                     )}
@@ -225,7 +225,9 @@ export const ContactSection = () => {
                   />
                 </div>
 
-                <Button className='mt-4'>Send message</Button>
+                <Button disabled={isLoading} className='mt-4'>
+                  Send message
+                </Button>
               </form>
             </Form>
           </CardContent>

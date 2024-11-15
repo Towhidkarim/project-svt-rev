@@ -1,6 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Icon } from '@/components/ui/icon';
-import { icons } from 'lucide-react';
+import atheImg from '@/public/awards/athe.png';
+import btecImg from '@/public/awards/btec.png';
+import cimaImg from '@/public/awards/cima.png';
+import iapImg from '@/public/awards/iap.png';
+import peopleCertImg from '@/public/awards/peope_cert.png';
+import tqukImg from '@/public/awards/tq-uk.jpg';
+import Image from 'next/image';
 
 interface FeaturesProps {
   icon: string;
@@ -8,42 +13,41 @@ interface FeaturesProps {
   description: string;
 }
 
-const featureList: FeaturesProps[] = [
+const featureList = [
   {
-    icon: 'TabletSmartphone',
-    title: 'Mobile Friendly',
+    icon: atheImg,
+    title: 'ATHE',
     description:
-      'Our platform is designed to be fully responsive, providing a seamless experience on',
+      'ATHE (Awards for Training and Higher Education) is an awarding body in the UK that provides learners',
   },
   {
-    icon: 'BadgeCheck',
-    title: 'Social Proof',
+    icon: btecImg,
+    title: 'Pearson BTEC',
     description:
-      'Showcase testimonials and real-world success stories to build trust and credibility.',
+      'Royal Charter gave the University of London limited powers to conduct exams and confer degrees',
   },
   {
-    icon: 'Goal',
-    title: 'Targeted Content',
+    icon: cimaImg,
+    title: 'CIMA',
     description:
-      'Deliver personalized content tailored to your audiences specific needs and interests.',
+      'CIMA (Chartered Institute of Management Accountants) is a leading awarding body in the world',
   },
   {
-    icon: 'PictureInPicture',
-    title: 'Strong Visuals',
+    icon: iapImg,
+    title: 'IAP',
     description:
-      'Engage viewers with high-quality visuals that captivate and communicate your brand message.',
+      'The International Awards for Professionals iAP, is an awarding body who aim to promote high education',
   },
   {
-    icon: 'MousePointerClick',
-    title: 'Clear CTA',
+    icon: peopleCertImg,
+    title: 'PeopleCert',
     description:
-      'Encourage action with straightforward, impactful call-to-action buttons and prompts.',
+      'PeopleCert delivers world-class certification programmes on behalf of a wide range of organisations.',
   },
   {
-    icon: 'Newspaper',
-    title: 'Clear Headline',
-    description:
-      'Grab attention instantly with a concise headline that communicates your core message.',
+    icon: tqukImg,
+    title: 'TK UK',
+    description: 'Training Qualifications UK (TQUK) is recognised by Ofqual',
   },
 ];
 
@@ -64,21 +68,20 @@ export const FeaturesSection = () => {
         succeed in their chosen fields.
       </h3>
 
-      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
         {featureList.map(({ icon, title, description }) => (
           <div key={title}>
-            <Card className='h-full bg-background border-0 shadow-none'>
+            <Card className='h-full bg-background border-0 shadow-none '>
               <CardHeader className='flex justify-center items-center'>
-                <div className='bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4'>
-                  <Icon
-                    name={icon as keyof typeof icons}
-                    size={24}
-                    color='hsl(var(--primary))'
-                    className='text-primary'
+                <div className='bg-primary/20 p-2 w-full rounded-xl ring-8 ring-primary/10 dark:bg-slate-50/55'>
+                  <Image
+                    src={icon}
+                    alt={title}
+                    className='w-[212px] h-[113px] object-contain mx-auto'
                   />
                 </div>
 
-                <CardTitle>{title}</CardTitle>
+                <CardTitle className=''>{title}</CardTitle>
               </CardHeader>
 
               <CardContent className='text-muted-foreground text-center'>

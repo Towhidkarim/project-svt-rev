@@ -42,7 +42,7 @@ export default function Home() {
       {/* <TeamSection /> */}
       {/* <CommunitySection /> */}
       {/* <PricingSection /> */}
-      {/* <ContactSection /> */}
+      <ContactSection />
       {/* <FAQSection /> */}
     </>
   );

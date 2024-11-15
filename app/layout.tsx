@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/layout/theme-provider';
 import { FooterSection } from '@/components/layout/sections/footer';
 import ChatButton from '@/components/layout/chat-button';
 import { CartProvider } from '@/lib/cart-context';
+import { Toaster } from '@/components/ui/sonner';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -30,8 +31,10 @@ export default function RootLayout({
         >
           <CartProvider>
             <Navbar />
+            <Toaster />
 
             {children}
+
             <ChatButton />
             <FooterSection />
           </CartProvider>

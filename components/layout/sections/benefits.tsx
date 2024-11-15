@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Icon } from '@/components/ui/icon';
-import { icons } from 'lucide-react';
+import { routes } from '@/lib/constants';
+import Link from 'next/link';
 
 interface BenefitsProps {
   icon: string;
@@ -11,27 +11,27 @@ interface BenefitsProps {
 const benefitList: BenefitsProps[] = [
   {
     icon: 'Blocks',
-    title: 'Build Brand Trust',
+    title: 'Language Courses',
     description:
-      'Establish credibility and reliability with your audience through consistent, high-quality interactions.',
+      'Master communication with effective grammar, fluency, and cultural insights for global connections.',
   },
   {
     icon: 'LineChart',
-    title: 'Engage More Learners',
+    title: 'SERU Courses',
     description:
-      'Attract and retain students by offering relevant, compelling educational content tailored to their needs.',
+      'Dive into innovation and strategic thinking to solve real-world challenges with cutting-edge approaches.',
   },
   {
     icon: 'Wallet',
-    title: 'Higher Conversions',
+    title: 'Security Courses',
     description:
-      'Convert interest into action by guiding prospects through a seamless, user-centered experience',
+      'Learn to safeguard systems and data with essential security skills for a secure system.',
   },
   {
     icon: 'Sparkle',
-    title: 'Enhance Learning Experience',
+    title: 'Vocational Courses',
     description:
-      'Refine educational approaches with data-driven insights to improve student engagement and outcomes.',
+      'Gain practical, hands-on skills for specialized careers and industry-ready expertise.',
   },
 ];
 
@@ -70,30 +70,23 @@ export const BenefitsSection = () => {
 
         <div className='grid lg:grid-cols-2 gap-4 w-full'>
           {benefitList.map(({ icon, title, description }, index) => (
-            <Card
-              key={title}
-              className='bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number'
-            >
-              <CardHeader>
-                <div className='flex justify-between'>
-                  <Icon
-                    name={icon as keyof typeof icons}
-                    size={32}
-                    color='hsl(var(--primary))'
-                    className='mb-6 text-primary'
-                  />
-                  <span className='text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30'>
-                    0{index + 1}
-                  </span>
-                </div>
+            <Link key={title} href={routes.courses}>
+              <Card className='bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number'>
+                <CardHeader>
+                  <div className='flex justify-between'>
+                    <span className='text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30'>
+                      0{index + 1}
+                    </span>
+                  </div>
 
-                <CardTitle>{title}</CardTitle>
-              </CardHeader>
+                  <CardTitle>{title}</CardTitle>
+                </CardHeader>
 
-              <CardContent className='text-muted-foreground'>
-                {description}
-              </CardContent>
-            </Card>
+                <CardContent className='text-muted-foreground'>
+                  {description}
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>

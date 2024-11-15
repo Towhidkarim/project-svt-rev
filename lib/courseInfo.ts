@@ -1,6 +1,6 @@
 export const courseCategories = [
   'Security Courses',
-  'Functional Skills',
+  'Language Courses',
   'Health and Social Care ',
   'Business Course',
   'SERU Course',
@@ -102,7 +102,7 @@ export const courseInfo: TCourseInfoType[] = [
     why: 'This comprehensive course is designed to equip you with the skills and knowledge you need to become a competent and effective CCTV supervisor. From understanding the legal requirements and regulations surrounding CCTV operations to mastering the latest technologies and techniques, this course covers everything you need to know.',
   },
   {
-    category: 'Functional Skills',
+    category: 'Language Courses',
     courseUniqueId: '3',
     imageUrl: '/gen1.png',
     title: 'General English',
@@ -137,7 +137,7 @@ export const courseInfo: TCourseInfoType[] = [
     why: 'This comprehensive course is designed to equip you with the skills and knowledge you need to become a competent and effective CCTV supervisor. From understanding the legal requirements and regulations surrounding CCTV operations to mastering the latest technologies and techniques, this course covers everything you need to know.',
   },
   {
-    category: 'Functional Skills',
+    category: 'Language Courses',
     courseUniqueId: '4',
     imageUrl: '/ielts.png',
     title: 'IELTS Preparation',
@@ -172,7 +172,7 @@ export const courseInfo: TCourseInfoType[] = [
     why: 'This comprehensive course is designed to equip you with the skills and knowledge you need to become a competent and effective CCTV supervisor. From understanding the legal requirements and regulations surrounding CCTV operations to mastering the latest technologies and techniques, this course covers everything you need to know.',
   },
   {
-    category: 'Functional Skills',
+    category: 'Language Courses',
     courseUniqueId: '5',
     imageUrl: '/a1.png',
     title: 'ESOL A1 Preliminary Test',

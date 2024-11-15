@@ -6,6 +6,15 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/ui/carousel';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+
 import Autoplay from 'embla-carousel-autoplay';
 import { routes } from '@/lib/constants';
 import { ArrowRight } from 'lucide-react';
@@ -64,22 +73,55 @@ export const HeroSection = () => {
         <Carousel
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 3000,
             }),
           ]}
           className='relative group mt-14'
         >
           <CarouselContent className=''>
             {courseInfo.map((item, index) => (
-              <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3'>
-                {/* <div className='absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl'></div> */}
+              <CarouselItem
+                key={index}
+                className='relative  md:basis-1/2 lg:basis-1/3 h-[450px]'
+              >
+                <div className='absolute top-3 left-3 font-bold tracking-wider w-24 text-center bg-primary text-primary-foreground p-2 z-10 rounded-lg border border-muted'>
+                  ${item.priceInCurrency}
+                </div>
                 <Image
                   width={1200}
                   height={1200}
-                  className='w-[400px] h-auto mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30'
+                  className='w-[400px] h-[200px] object-cover mx-auto rounded-lg relative rouded-lg leading-none flex items-center  '
                   src={item.imageUrl}
                   alt='dashboard'
                 />
+                <div className='absolute bg-gradient-to-t min-h-44 text-ellipsis line-clamp-4 from-white to-transparent bottom-0'>
+                  <div className='font-semibold text-lg  my-3 overflow-hidden'>
+                    {item.title}
+                  </div>
+                  <div className='my-2 text-muted-foreground'>
+                    {item.caption.substring(0, 128)}...
+                  </div>
+                  <Button className=' mx-auto mt-5' asChild>
+                    <Link href={`/courses/${item.courseUniqueId}`}>
+                      Learn More
+                    </Link>
+                  </Button>
+                </div>
+                {/* <div className='p-1'>
+                  <Card className='rounded-lg border max-w-[400px] w-full'>
+                    <CardHeader className='bg-slate-500 h-44  relative'>
+                      <div className='px-1 py-2 rounded-r-lg absolute top-3 left-0 text-primary-foreground bg-primary font-semibold grid place-items-center'>
+                        $14.99
+                      </div>
+                      <CardTitle>{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className='flex aspect-[9/12] items-center justify-center p-6'>
+                      <span className='text-3xl font-semibold'>
+                        {index + 1}
+                      </span>
+                    </CardContent>
+                  </Card>
+                </div> */}
 
                 {/* <div className='absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg'></div> */}
               </CarouselItem>

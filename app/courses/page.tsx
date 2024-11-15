@@ -43,8 +43,13 @@ export default function Page({
               key={index}
               className='flex md:flex-row flex-col gap-2 justify-start items-center '
             >
-              <figure className='size-60  relative border rounded-md mx-4'>
-                <Image src={item.imageUrl} alt={item.title} fill />
+              <figure className='size-80  relative  rounded-md mx-4'>
+                <Image
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className='object-contain'
+                  fill
+                />
               </figure>
               <div className='border-b w-full my-5'>
                 <h1 className='md:text-2xl text-xl'>{item.title}</h1>
