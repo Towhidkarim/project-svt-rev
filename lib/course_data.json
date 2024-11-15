@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Language Courses, (categories from a list, string matching acurately)",
+    "courseUniqueId": "1 incremental order, say 1, next appened course will have 2 then 3 so on",
+    "imageUrl": "/courses/crs_1.png",
+    "title": "General English",
+    "subTitle": "Our General English course is designed for those currently at Beginner A1 to Upper Intermediate B2+ levels who want to improve their knowledge of the English language",
+    "caption": "Our General English course is designed for those currently at Beginner A1 to Upper Intermediate B2+ levels who want to improve their knowledge of the English language, pronunciation, accent, and confidence. By taking this English language course, you will develop your practical English communication skills in speaking and writing, reading and listening, and, of course, your fluency and grammatical accuracy. You will increase your confidence when using your language skills in English for everyday use, whether it’s for work, study, travel, or personal interest.Our friendly and supportive teachers will give you the individual attention you need with regular one-to-one tutorials. You will have the chance to practice your spoken English in discussions, debates, role-play, and pair work, and learn to use English in everyday situations. The course will help you by teaching you the skills you can use in your everyday life in the UK.",
+    "courseDetails": "Details go here as you may like",
+    "suitedFor": [
+      "Be at least 16 years old",
+      "Beginner A1 level or higher who is interested in improving their general English language skills",
+      "Anyone wants to feel more confident when speaking in English with others."
+    ],
+    "forYouIf": [
+      "Expand your vocabulary to improve everyday conversation skills",
+      "Practice writing different types of texts, such as letters, emails, stories, and short essays",
+      "Listen to different accents, and develop and adopt different techniques to aid comprehension",
+      "Practice pronunciation of individual sounds, intonation, rhythm, and stress",
+      "Learn how to use a dictionary effectively",
+      "Work in a team and take part in group projects"
+    ],
+    "booking": true,
+    "covers": "Expand your vocabulary to improve everyday conversation skills, Practice writing different types of texts, such as letters, emails, stories, and short essays, Listen to different accents, and develop and adopt different techniques to aid comprehension, Practice pronunciation of individual sounds, intonation, rhythm, and stress, Learn how to use a dictionary effectively, Work in a team and take part in group projects, Practice basic presentation skills: leading and participating, using visual aids",
+    "courseStructure": "Regular assessments and tutorials, SMART Learning trips and activities around the city to help your English progress faster, End-of-course, Certificate of Attendance, Free Wi-Fi, Welcome pack, Student ID card, Kitchenettes in all centres, Snacks and drink machines, 24/7 emergency number, City-switch means you can start your course in one city and finish it in another, giving you the opportunity to discover more of the UK ",
+
+    "pricing": "Buy £35. Rent: £35 (£25 refundable). ",
+    "priceInCurrency": 35,
+    "assesment": " ",
+    "duration": "1 Week+",
+    "entryRequirements": "Mentioned Above",
+    "why": "This course will improve your certai skills...."
+  },
+
+  {
+    "category": "Language Courses, (categories from a list, string matching acurately)",
+    "courseUniqueId": "2 incremental order, say 1, next appened course will have 2 then 3 so on",
+    "imageUrl": "/courses/crs_2.png",
+    "title": "General English",
+    "subTitle": "Our General English course is designed for those currently at Beginner A1 to Upper Intermediate B2+ levels who want to improve their knowledge of the English language",
+    "caption": "Our General English course is designed for those currently at Beginner A1 to Upper Intermediate B2+ levels who want to improve their knowledge of the English language, pronunciation, accent, and confidence. By taking this English language course, you will develop your practical English communication skills in speaking and writing, reading and listening, and, of course, your fluency and grammatical accuracy. You will increase your confidence when using your language skills in English for everyday use, whether it’s for work, study, travel, or personal interest.Our friendly and supportive teachers will give you the individual attention you need with regular one-to-one tutorials. You will have the chance to practice your spoken English in discussions, debates, role-play, and pair work, and learn to use English in everyday situations. The course will help you by teaching you the skills you can use in your everyday life in the UK.",
+    "courseDetails": "Details go here as you may like",
+    "suitedFor": [
+      "Be at least 16 years old",
+      "Beginner A1 level or higher who is interested in improving their general English language skills",
+      "Anyone wants to feel more confident when speaking in English with others."
+    ],
+    "forYouIf": [
+      "Expand your vocabulary to improve everyday conversation skills",
+      "Practice writing different types of texts, such as letters, emails, stories, and short essays",
+      "Listen to different accents, and develop and adopt different techniques to aid comprehension",
+      "Practice pronunciation of individual sounds, intonation, rhythm, and stress",
+      "Learn how to use a dictionary effectively",
+      "Work in a team and take part in group projects"
+    ],
+    "booking": true,
+    "covers": "Expand your vocabulary to improve everyday conversation skills, Practice writing different types of texts, such as letters, emails, stories, and short essays, Listen to different accents, and develop and adopt different techniques to aid comprehension, Practice pronunciation of individual sounds, intonation, rhythm, and stress, Learn how to use a dictionary effectively, Work in a team and take part in group projects, Practice basic presentation skills: leading and participating, using visual aids",
+    "courseStructure": "Regular assessments and tutorials, SMART Learning trips and activities around the city to help your English progress faster, End-of-course, Certificate of Attendance, Free Wi-Fi, Welcome pack, Student ID card, Kitchenettes in all centres, Snacks and drink machines, 24/7 emergency number, City-switch means you can start your course in one city and finish it in another, giving you the opportunity to discover more of the UK ",
+
+    "pricing": "Buy £35. Rent: £35 (£25 refundable). ",
+    "priceInCurrency": 35,
+    "assesment": " ",
+    "duration": "1 Week+",
+    "entryRequirements": "Mentioned Above",
+    "why": "This course will improve your certai skills...."
+  }
+]

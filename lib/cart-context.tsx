@@ -25,7 +25,11 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   const addToCart = (item: CartItem) => {
-    setCartItems((prevItems) => [...prevItems, item]);
+    setCartItems((prevItems) => {
+      if (prevItems.filter((value) => value.id === item.id).length === 0)
+        return [...prevItems, item];
+      else return [...prevItems];
+    });
   };
 
   const removeFromCart = (id: string) => {

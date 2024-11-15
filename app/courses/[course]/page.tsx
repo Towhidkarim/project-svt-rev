@@ -10,10 +10,11 @@ import {
 } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { contactDetails } from '@/lib/constants';
+import { contactDetails, routes } from '@/lib/constants';
 import { FooterSection } from '@/components/layout/sections/footer';
 import { ContactSection } from '@/components/layout/sections/contact';
 import PurchaseSection from './purchase-section';
+import Link from 'next/link';
 
 export default function Page({
   params,
@@ -147,7 +148,9 @@ export default function Page({
             </CardContent>
 
             <CardFooter className='flex flex-col gap-2'>
-              <Button className='w-full'>Purchase Now</Button>
+              {/* <Button className='w-full' asChild>
+                <Link href={routes.checkout}>Purchase Now</Link>
+              </Button> */}
               <PurchaseSection
                 id={currentCourseInfo.courseUniqueId}
                 price={currentCourseInfo.priceInCurrency}

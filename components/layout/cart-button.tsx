@@ -16,6 +16,8 @@ import {
 } from '@/components/ui/drawer';
 import { Button } from '../ui/button';
 import { Separator } from '@radix-ui/react-separator';
+import Link from 'next/link';
+import { routes } from '@/lib/constants';
 
 export default function CartButton({ className }: { className?: string }) {
   const { cartItems, removeFromCart, clearCart } = useCartContext();
@@ -65,7 +67,9 @@ export default function CartButton({ className }: { className?: string }) {
             </div>
           </DrawerHeader>
           <DrawerFooter>
-            <Button>Checkout</Button>
+            <Button asChild>
+              <Link href={routes.checkout}>Checkout</Link>
+            </Button>
             <Button variant='destructive' onClick={() => clearCart()}>
               Clear Cart
             </Button>

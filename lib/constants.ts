@@ -10,6 +10,7 @@ export const routes = {
   courses: '/courses',
   contact: '/contact',
   faq: '/faq',
+  checkout: '/checkout',
 };
 
 //in international format
