@@ -56,6 +56,7 @@ export const ContactSection = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const { firstName, lastName, email, subject, message } = values;
 
+    setIsLoading(true);
     const response = await SendContactInfoAction({
       firstName,
       lastName,
@@ -63,7 +64,6 @@ export const ContactSection = () => {
       subject,
       message,
     });
-    setIsLoading(true);
     if (response.ok) {
       toast("Sent Succesfully, We'll get back to you soon!");
     } else toast('Something Went Wrong, please try again');
@@ -86,8 +86,8 @@ export const ContactSection = () => {
             <h2 className='text-3xl md:text-4xl font-bold'>Connect With Us</h2>
           </div>
           <p className='mb-8 text-muted-foreground lg:w-5/6'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            ipsam sint enim exercitationem ex autem corrupti quas tenetur
+            Contact us for any queries you may have, we will reach out as soon
+            as we can
           </p>
 
           <div className='flex flex-col gap-4'>

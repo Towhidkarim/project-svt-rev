@@ -49,8 +49,7 @@ export default function CheckoutSection({ amount }: { amount: number }) {
       elements,
       clientSecret,
       confirmParams: {
-        receipt_email: 'towhidkarim55@gmail.com',
-        return_url: `http://www.localhost:3000/payment-success?amount=${amount}`,
+        return_url: `https://${process.env.CURRENT_DOMAIN}/payment-success?amount=${amount}`,
       },
     });
 
