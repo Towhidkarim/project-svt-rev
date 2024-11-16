@@ -1,6 +1,7 @@
 import { BenefitsSection } from '@/components/layout/sections/benefits';
 import { CommunitySection } from '@/components/layout/sections/community';
 import { ContactSection } from '@/components/layout/sections/contact';
+import CourseCarousel from '@/components/layout/sections/course-carousel';
 import { FAQSection } from '@/components/layout/sections/faq';
 import { FeaturesSection } from '@/components/layout/sections/features';
 import { FooterSection } from '@/components/layout/sections/footer';
@@ -34,6 +35,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <CourseCarousel />
       <SponsorsSection />
       <BenefitsSection />
       <FeaturesSection />

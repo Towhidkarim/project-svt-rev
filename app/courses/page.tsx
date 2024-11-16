@@ -45,7 +45,11 @@ export default function Page({
             >
               <figure className='size-80  relative  rounded-md mx-4'>
                 <Image
-                  src={item.imageUrl}
+                  src={
+                    item.imageUrl === ''
+                      ? '/diplomaBBAskills.png'
+                      : item.imageUrl
+                  }
                   alt={item.title}
                   className='object-contain'
                   fill
@@ -55,7 +59,11 @@ export default function Page({
                 <h1 className='md:text-2xl text-xl'>{item.title}</h1>
                 <hr />
                 <h3 className='text-lg text-muted-foreground'>
-                  {item.caption}
+                  {item.caption === ''
+                    ? item.subTitle === ''
+                      ? item.courseDetails.substring(0, 128)
+                      : item.subTitle
+                    : item.caption}
                 </h3>
                 <Button className='my-5' asChild>
                   <Link href={`/courses/${item.courseUniqueId}`}>

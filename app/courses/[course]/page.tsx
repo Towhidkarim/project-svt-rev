@@ -73,31 +73,10 @@ export default function Page({
             <br />
             <p className='mb-2'>{currentCourseInfo.courseStructure}</p>
             <h3 className='font-semibold text-lg mt-5 mb-3 text-foreground opacity-75'>
-              Mandatory Units
-            </h3>
-            <hr className='my-2 border-2' />
-
-            <div>
-              {currentCourseInfo.mandatoryUnits.map((item, index) => (
-                <div key={index} className='flex gap-10 my-5 flex-row'>
-                  <span>{item.code}</span>
-                  <span>{item.desc}</span>
-                </div>
-              ))}
-            </div>
-            <h3 className='font-semibold text-lg mt-5 mb-3 text-foreground opacity-75'>
               Optional Units
             </h3>
             <hr className='my-2 border-2' />
 
-            <div>
-              {currentCourseInfo.optionalUnits.map((item, index) => (
-                <div key={index} className='flex gap-10 my-5 flex-row'>
-                  <span>{item.code}</span>
-                  <span>{item.desc}</span>
-                </div>
-              ))}
-            </div>
             <h3 className='font-semibold text-lg mt-5 mb-3 text-foreground opacity-75'>
               Pricing
             </h3>
