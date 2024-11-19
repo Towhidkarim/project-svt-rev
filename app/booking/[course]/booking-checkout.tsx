@@ -20,6 +20,7 @@ import {
 } from '@/components/ui/popover';
 import { SendBookingInfoAction } from '@/lib/actions';
 import { toast } from 'sonner';
+import PaymentComplete from '@/components/layout/payment-complete';
 
 function convertToSubcurrency(amount: number, factor = 100) {
   return Math.round(amount * factor);
@@ -34,6 +35,7 @@ export default function BookingCheckout({
 }) {
   const stripe = useStripe();
   const elements = useElements();
+  const [paymentSuccesful, setPaymentSuccesful] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
   const [clientSecret, setClientSecret] = useState('');
   const [loading, setLoading] = useState(false);
@@ -72,13 +74,13 @@ export default function BookingCheckout({
       setLoading(false);
       return;
     }
-    const location = window.location.hostname;
+    const location = window.location.origin;
     const { error } = await stripe.confirmPayment({
       elements,
       clientSecret,
       redirect: 'if_required',
       confirmParams: {
-        return_url: `https://${location}/payment-success?amount=${amount}`,
+        return_url: `${location}/payment-success?amount=${amount}`,
       },
     });
     if (error) {
@@ -94,9 +96,8 @@ export default function BookingCheckout({
         courseName: userInfo.courseName,
         lastName: userInfo.lastName,
       });
-      if (res.ok)
-        toast('Your Exam have been booked, you will be contacted shortly');
-      else console.log(res.message);
+      if (res.ok) setPaymentSuccesful(true);
+      else toast('Something Went Wrong');
     }
 
     setLoading(false);
@@ -119,6 +120,7 @@ export default function BookingCheckout({
 
   return (
     <form onSubmit={handleSubmit} className='bg-white p-2 rounded-md'>
+      <PaymentComplete open={paymentSuccesful} />
       <div className='w-full flex flex-col gap-4 my-4'>
         <Label>
           First Name

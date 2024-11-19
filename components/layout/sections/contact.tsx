@@ -31,6 +31,7 @@ import { contactDetails, contactSubjects } from '@/lib/constants';
 import SendContactInfoAction from '@/lib/actions';
 import { toast } from 'sonner';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 const formSchema = z.object({
   firstName: z.string().min(2).max(255),
@@ -41,13 +42,15 @@ const formSchema = z.object({
 });
 
 export const ContactSection = () => {
+  const searchParams = useSearchParams();
+  const subject = searchParams.get('sub') ?? '';
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       firstName: '',
       lastName: '',
       email: '',
-      subject: '',
+      subject,
       message: '',
     },
   });
@@ -196,7 +199,12 @@ export const ContactSection = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Subject</FormLabel>
-                        <Input type='text' placeholder='Subject' {...field} />
+                        <Input
+                          type='text'
+                          placeholder='Subject'
+                          {...field}
+                          disabled={subject !== ''}
+                        />
                         <FormMessage />
                       </FormItem>
                     )}
