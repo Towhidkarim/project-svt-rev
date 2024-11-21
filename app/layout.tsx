@@ -8,6 +8,8 @@ import { FooterSection } from '@/components/layout/sections/footer';
 import ChatButton from '@/components/layout/chat-button';
 import { CartProvider } from '@/lib/cart-context';
 import { Toaster } from '@/components/ui/sonner';
+import NextTopLoader from 'nextjs-toploader';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -32,7 +34,7 @@ export default function RootLayout({
           <CartProvider>
             <Navbar />
             <Toaster />
-
+            <NextTopLoader />
             {children}
 
             <ChatButton />

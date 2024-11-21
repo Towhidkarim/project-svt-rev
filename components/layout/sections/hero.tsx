@@ -49,7 +49,9 @@ export const HeroSection = () => {
           </Badge>
 
           <div className='max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold'>
-            <h1 className='text-md:4xl text-2xl my-2'>Educate Your Future</h1>
+            <h1 className='text-md:4xl text-2xl my-2 opacity-90'>
+              Educate Your Future
+            </h1>
             <h1>
               Study with
               <br />
@@ -65,7 +67,10 @@ export const HeroSection = () => {
           </p>
 
           <div className='space-y-4 md:space-y-0 md:space-x-4'>
-            <Button className='w-5/6 md:w-1/4 font-bold group/arrow' asChild>
+            <Button
+              className='w-5/6 md:w-1/4 font-bold group/arrow hover:opacity-95'
+              asChild
+            >
               <Link href={routes.courses}>
                 Get Started
                 <ArrowRight className='size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform' />
@@ -75,7 +80,7 @@ export const HeroSection = () => {
             <Button
               asChild
               variant='secondary'
-              className='w-5/6 md:w-1/4 font-bold'
+              className='w-5/6 md:w-1/4 font-bold hover:opacity-95'
             >
               <Link href='#faq'>Learn More</Link>
             </Button>
