@@ -3,6 +3,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '@/components/ui/carousel';
 import {
   Card,
@@ -17,6 +19,7 @@ import { courseInfo } from '@/lib/courseInfo';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { getRandomImage } from '@/lib/utils';
 
 export default function CourseCarousel() {
   return (
@@ -40,7 +43,7 @@ export default function CourseCarousel() {
                         src={
                           item.imageUrl !== ''
                             ? item.imageUrl
-                            : '/diplomaBBA.png'
+                            : getRandomImage()
                         }
                         alt={item.title}
                         className='object-contain'
@@ -48,7 +51,7 @@ export default function CourseCarousel() {
                       />
                     </figure>
                     <div className='px-2 py-2 rounded-r-lg absolute top-3 left-0 text-primary-foreground bg-primary font-bold grid place-items-center'>
-                      $14.99
+                      ${item.priceInCurrency}
                     </div>
                     <CardTitle>{item.title}</CardTitle>
                     <CardDescription className='text-base'>
@@ -72,6 +75,8 @@ export default function CourseCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
       </Carousel>
     </div>
   );
