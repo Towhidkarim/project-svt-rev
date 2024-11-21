@@ -16,7 +16,6 @@ export function getRandomImage() {
     '/diplomaBBA.png',
     '/diplomaBBAskills.png',
     '/img1.png',
-    '/img2.png',
   ];
   return imageList[Math.round(Math.random() * (imageList.length - 1))];
 }

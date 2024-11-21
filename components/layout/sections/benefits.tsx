@@ -38,14 +38,16 @@ const benefitList: BenefitsProps[] = [
 export const BenefitsSection = () => {
   return (
     <section id='benefits' className='container py-24 sm:py-32'>
-      <div className='grid lg:grid-cols-2 place-items-center lg:gap-24'>
+      <div className='flex flex-col gap-10 justify-center items-center'>
         <div>
-          <h2 className='text-lg text-primary mb-2 tracking-wider'>Benefits</h2>
-
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-            Your Shortcut to Success
+          <h2 className='text-lg text-primary mb-2 tracking-wider text-center'>
+            Benefits
           </h2>
-          <div className='text-lg text-muted-foreground mb-8'>
+
+          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-center'>
+            Types of course we offer and more
+          </h2>
+          {/* <div className='text-lg text-muted-foreground mb-8'>
             <ul className='list-disc flex flex-col gap-4'>
               <li>
                 We provide short courses, Apprenticeships and Functional
@@ -65,10 +67,10 @@ export const BenefitsSection = () => {
                 courses for their career paths
               </li>
             </ul>
-          </div>
+          </div>  */}
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-4 w-full'>
+        <div className='grid lg:grid-cols-2 gap-4 w-4/5 '>
           {benefitList.map(({ icon, title, description }, index) => (
             <Link key={title} href={routes.courses}>
               <Card className='bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number'>

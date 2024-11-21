@@ -14,7 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { Star } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 
 interface ReviewProps {
   image: string;
@@ -26,15 +26,15 @@ interface ReviewProps {
 
 const reviewList: ReviewProps[] = [
   {
-    image: 'https://github.com/shadcn.png',
+    image: 'https://i.pravatar.cc/250?img=58',
     name: 'James Parker',
     userName: 'Product Manager',
     comment:
-      'The course offered a comprehensive understanding of leadership skills, and I particularly appreciated the practical approach to problem-solving. My tutor, Emma, provided continuous support and feedback, which was invaluable. Highly recommended! ',
+      'The course offered a comprehensive understanding of leadership skills, and I particularly appreciated the practical approach to problem-solving. My tutor, Emma, provided continuous support and feedback. ',
     rating: 5.0,
   },
   {
-    image: 'https://github.com/shadcn.png',
+    image: 'https://www.linkedin.com/in/leopoldo-miranda/',
     name: 'Sophia Collins',
     userName: 'Cybersecurity Analyst',
     comment:
@@ -43,7 +43,8 @@ const reviewList: ReviewProps[] = [
   },
 
   {
-    image: 'https://github.com/shadcn.png',
+    image:
+      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     name: 'Adam Johnson',
     userName: 'GreenTech Innovations',
     comment:
@@ -51,7 +52,7 @@ const reviewList: ReviewProps[] = [
     rating: 4.9,
   },
   {
-    image: 'https://github.com/shadcn.png',
+    image: 'https://x.com/leo_mirand4',
     name: 'Ethan Parker',
     userName: 'Data Scientist',
     comment:
@@ -59,7 +60,7 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: 'https://github.com/shadcn.png',
+    image: 'https://www.linkedin.com/in/leopoldo-miranda/',
     name: 'Ava Mitchell',
     userName: 'IT Project Manager',
     comment:
@@ -67,7 +68,9 @@ const reviewList: ReviewProps[] = [
     rating: 5.0,
   },
   {
-    image: 'https://github.com/shadcn.png',
+    image:
+      'https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+
     name: 'Isabella Reed',
     userName: 'DevOps Engineer',
     comment:
@@ -101,14 +104,15 @@ export const TestimonialSection = () => {
               key={review.name}
               className='md:basis-1/2 lg:basis-1/3'
             >
-              <Card className='bg-muted/50 dark:bg-card'>
+              <Card className='bg-muted/50 dark:bg-card rounded-2xl'>
                 <CardContent className='pt-6 pb-0'>
                   <div className='flex gap-1 pb-6'>
+                    {/* <Star className='size-4 fill-primary text-primary' />
                     <Star className='size-4 fill-primary text-primary' />
                     <Star className='size-4 fill-primary text-primary' />
                     <Star className='size-4 fill-primary text-primary' />
-                    <Star className='size-4 fill-primary text-primary' />
-                    <Star className='size-4 fill-primary text-primary' />
+                    <Star className='size-4 fill-primary text-primary' /> */}
+                    <Quote size={40} className='fill-primary stroke-primary' />
                   </div>
                   {`"${review.comment}"`}
                 </CardContent>
@@ -117,7 +121,8 @@ export const TestimonialSection = () => {
                   <div className='flex flex-row items-center gap-4'>
                     <Avatar>
                       <AvatarImage
-                        src='https://avatars.githubusercontent.com/u/75042455?v=4'
+                        className='object-cover'
+                        src={review.image}
                         alt='radix'
                       />
                       <AvatarFallback>SV</AvatarFallback>

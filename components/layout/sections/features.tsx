@@ -1,10 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import atheImg from '@/public/awards/athe.png';
-import btecImg from '@/public/awards/btec.png';
-import cimaImg from '@/public/awards/cima.png';
-import iapImg from '@/public/awards/iap.png';
-import peopleCertImg from '@/public/awards/peope_cert.png';
-import tqukImg from '@/public/awards/tq-uk.jpg';
+import langcertImg from '@/public/awards/langcert.webp';
+import biiab from '@/public/awards/biiab.jpeg';
+import proqImg from '@/public/awards/proqual.jpeg';
+// import btecImg from '@/public/awards/btec.png';
+// import cimaImg from '@/public/awards/cima.png';
+// import iapImg from '@/public/awards/iap.png';
+// import peopleCertImg from '@/public/awards/peope_cert.png';
+// import tqukImg from '@/public/awards/tq-uk.jpg';
 import Image from 'next/image';
 
 interface FeaturesProps {
@@ -17,38 +20,52 @@ const featureList = [
   {
     icon: atheImg,
     title: 'ATHE',
-    description:
-      'ATHE (Awards for Training and Higher Education) is an awarding body in the UK that provides learners',
+    description: '',
   },
   {
-    icon: btecImg,
-    title: 'Pearson BTEC',
-    description:
-      'Royal Charter gave the University of London limited powers to conduct exams and confer degrees',
+    icon: langcertImg,
+    title: 'Language Cert',
+    description: '',
   },
   {
-    icon: cimaImg,
-    title: 'CIMA',
-    description:
-      'CIMA (Chartered Institute of Management Accountants) is a leading awarding body in the world',
+    icon: biiab,
+    title: 'BIIAB',
+    description: '',
   },
   {
-    icon: iapImg,
-    title: 'IAP',
-    description:
-      'The International Awards for Professionals iAP, is an awarding body who aim to promote high education',
+    icon: proqImg,
+    title: 'ProQual',
+    description: '',
   },
-  {
-    icon: peopleCertImg,
-    title: 'PeopleCert',
-    description:
-      'PeopleCert delivers world-class certification programmes on behalf of a wide range of organisations.',
-  },
-  {
-    icon: tqukImg,
-    title: 'TK UK',
-    description: 'Training Qualifications UK (TQUK) is recognised by Ofqual',
-  },
+  // {
+  //   icon: btecImg,
+  //   title: 'Pearson BTEC',
+  //   description:
+  //     'Royal Charter gave the University of London limited powers to conduct exams and confer degrees',
+  // },
+  // {
+  //   icon: cimaImg,
+  //   title: 'CIMA',
+  //   description:
+  //     'CIMA (Chartered Institute of Management Accountants) is a leading awarding body in the world',
+  // },
+  // {
+  //   icon: iapImg,
+  //   title: 'IAP',
+  //   description:
+  //     'The International Awards for Professionals iAP, is an awarding body who aim to promote high education',
+  // },
+  // {
+  //   icon: peopleCertImg,
+  //   title: 'PeopleCert',
+  //   description:
+  //     'PeopleCert delivers world-class certification programmes on behalf of a wide range of organisations.',
+  // },
+  // {
+  //   icon: tqukImg,
+  //   title: 'TK UK',
+  //   description: 'Training Qualifications UK (TQUK) is recognised by Ofqual',
+  // },
 ];
 
 export const FeaturesSection = () => {
@@ -68,7 +85,7 @@ export const FeaturesSection = () => {
         succeed in their chosen fields.
       </h3>
 
-      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2  gap-6'>
         {featureList.map(({ icon, title, description }) => (
           <div key={title}>
             <Card className='h-full bg-background border-0 shadow-none '>
