@@ -11,6 +11,7 @@ import { ServicesSection } from '@/components/layout/sections/services';
 import { SponsorsSection } from '@/components/layout/sections/sponsors';
 import { TeamSection } from '@/components/layout/sections/team';
 import { TestimonialSection } from '@/components/layout/sections/testimonial';
+import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Greenwich Central College',
@@ -44,7 +45,9 @@ export default function Home() {
       {/* <TeamSection /> */}
       {/* <CommunitySection /> */}
       {/* <PricingSection /> */}
-      <ContactSection />
+      <Suspense>
+        <ContactSection />
+      </Suspense>
       {/* <FAQSection /> */}
     </>
   );
