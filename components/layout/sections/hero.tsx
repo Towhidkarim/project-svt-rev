@@ -35,7 +35,10 @@ export const HeroSection = () => {
         id='myVideo'
         className=' absolute top-0 left-0 -z-50 w-screen h-auto blur-sm min-h-[80vh] object-cover'
       >
-        <source src='videos/hero.mp4' type='video/mp4' />
+        <source
+          src='https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/videos/hero.mp4'
+          type='video/mp4'
+        />
         Your browser does not support HTML5 video.
       </video>
       <div className='w-full aspect-video absolute top-0 left-0 -z-20 bg-black/50 blur-sm min-h-[80vh] '></div>

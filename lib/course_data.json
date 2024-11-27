@@ -2,7 +2,7 @@
   {
     "category": "Security Courses",
     "courseUniqueId": "01",
-    "imageUrl": "/door-supervisor.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/door-supervisor.jpg",
     "title": "Level 2 Door Supervisor",
     "subTitle": "Advance your career in the security industry",
     "courseDetails": "",
@@ -33,7 +33,7 @@
   {
     "category": "Security Courses",
     "courseUniqueId": "02",
-    "imageUrl": "/cctv-supervisor.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/cctv-supervisor.jpg",
     "title": "CCTV Supervisor",
     "subTitle": "Take your career in the security industry to the next level",
     "courseDetails": "",
@@ -63,7 +63,7 @@
   {
     "category": "Language Courses",
     "courseUniqueId": "03",
-    "imageUrl": "/gen1.png",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/gen1.png",
     "title": "General English",
     "subTitle": "Our General English course is designed for those currently at Beginner A1 to Upper Intermediate B2+ levels who want to improve their knowledge of the English language",
     "caption": "Our General English course is designed for those currently at Beginner A1 to Upper Intermediate B2+ levels who want to improve their knowledge of the English language, pronunciation, accent, and confidence. By taking this English language course, you will develop your practical English communication skills in speaking and writing, reading and listening, and, of course, your fluency and grammatical accuracy. You will increase your confidence when using your language skills in English for everyday use, whether it’s for work, study, travel, or personal interest.Our friendly and supportive teachers will give you the individual attention you need with regular one-to-one tutorials. You will have the chance to practice your spoken English in discussions, debates, role-play, and pair work, and learn to use English in everyday situations. The course will help you by teaching you the skills you can use in your everyday life in the UK.",
@@ -94,7 +94,7 @@
   {
     "category": "Language Courses",
     "courseUniqueId": "04",
-    "imageUrl": "/ielts.png",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/ielts.png",
     "title": "IELTS Preparation",
     "subTitle": "Our IELTS preparation course is designed to help you improve the key English language skills and exam techniques required to help you reach the score you need, be it for university entry, visa application, or international work experience",
     "caption": "The International English Language Testing System (IELTS) is the world’s most popular English language test for studying in higher education. It is also recognized by many employers and government immigration agencies as proof of your ability to communicate in English. It consists of four parts: speaking, writing, listening, and reading. Each part is marked separately on a scale of one to nine; an average score covering all four is also given at the end of the test. Test results are valid for two years and can be reset at any time.",
@@ -124,7 +124,7 @@
   {
     "category": "Language Courses",
     "courseUniqueId": "05",
-    "imageUrl": "/a1.png",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/a1.png",
     "title": "ESOL A1 Preliminary Test",
     "subTitle": "Written (Listening, Reading, Writing) and Spoken (Speaking) exams in English",
     "caption": "Written (Listening, Reading, Writing) and Spoken (Speaking) exams in English, aligned to the A1 level of the CEFR*. Exams are delivered through our global network of Test Centers.",
@@ -154,7 +154,7 @@
   {
     "category": "Vocational Courses",
     "courseUniqueId": "06",
-    "imageUrl": "/diplomaBBA.png",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/diplomaBBA.png",
     "title": "LEVEL 3 – DIPLOMA IN BUSINESS ADMINISTRATION",
     "subTitle": "This qualification aims to provide learners with the knowledge and skills they need to operate as a successful business administrator.",
     "caption": "This qualification aims to provide learners with the knowledge and skills they need to operate as a successful business administrator. It also allows learners to develop skills in a range of areas relevant to business administration roles. This qualification is part of an apprenticeship and suitable for learners aged 16 and above",
@@ -187,7 +187,7 @@
   {
     "category": "Vocational Courses",
     "courseUniqueId": "07",
-    "imageUrl": "/diplomaBBAskills.png",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/diplomaBBAskills.png",
     "title": "LEVEL 3 – DIPLOMA IN BUSINESS ADMINISTRATION",
     "subTitle": "This qualification is for learners aged 16 and above and is suitable for use within a study program. Ideal for learners who want to develop an understanding of the essential skills required to work successfully in a business environment",
     "caption": "This qualification is for learners aged 16 and above and is suitable for use within a study program. Ideal for learners who want to develop an understanding of the essential skills required to work successfully in a business environment; this course provides learners with an understanding of business culture and responsibilities. This qualification also helps to develop the skills required to solve problems, communicate, and work effectively with others and allows learners to manage and improve their performance in a business environment. Pathways for this course may take you into finance, customer service, retail management, human resources, and enterprise.",

@@ -7,15 +7,15 @@ export function cn(...inputs: ClassValue[]) {
 
 export function getRandomImage() {
   const imageList = [
-    '/courseimg/course_img (1).jpg',
-    '/courseimg/course_img (1).webp',
-    '/courseimg/course_img (2).jpg',
-    '/courseimg/course_img (2).webp',
-    '/courseimg/course_img (3).jpg',
-    '/courseimg/course_img (3).webp',
-    '/diplomaBBA.png',
-    '/diplomaBBAskills.png',
-    '/img1.png',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/courseimg/course_img%20(1).jpg',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/courseimg/course_img%20(1).webp',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/courseimg/course_img%20(2).jpg',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/courseimg/course_img%20(2).webp',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/courseimg/course_img%20(2).webp',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/courseimg/course_img%20(3).jpg',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/diplomaBBA.png',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/diplomaBBAskills.png',
+    'https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/img1.png',
   ];
   return imageList[Math.round(Math.random() * (imageList.length - 1))];
 }
