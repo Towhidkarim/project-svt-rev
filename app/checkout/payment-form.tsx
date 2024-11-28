@@ -60,14 +60,14 @@ export default function PaymentForm() {
               >
                 <span>{item.name}</span>
                 <div className='flex gap-3 justify-center items-center'>
-                  <span>${item.price}</span>
+                  <span>£{item.price}</span>
                 </div>
               </div>
             ))}
             <div className='flex p-2 flex-row justify-between font-semibold'>
               <span>Total:</span>
               <span className=''>
-                ${cartItems.reduce((prev, curr) => prev + curr.price, 0)}
+                £{cartItems.reduce((prev, curr) => prev + curr.price, 0)}
               </span>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function PaymentForm() {
         <h1 className='text-4xl font-extrabold mb-2'>Course Payment</h1>
         <h2 className='text-2xl'>
           of amount
-          <span className='font-bold'> ${amount}</span>
+          <span className='font-bold'> £{amount}</span>
         </h2>
       </div>
       <div className='max-w-6xl'>

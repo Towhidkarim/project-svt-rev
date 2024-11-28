@@ -153,7 +153,7 @@ export default function CheckoutSection({ amount }: { amount: number }) {
         disabled={!stripe || loading}
         className='text-primary-foreground w-full p-5 bg-primary mt-2 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse'
       >
-        {!loading ? `Pay $${amount}` : 'Processing...'}
+        {!loading ? `Pay £${amount}` : 'Processing...'}
       </button>
     </form>
   );

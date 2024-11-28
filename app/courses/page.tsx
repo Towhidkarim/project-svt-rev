@@ -64,7 +64,7 @@ export default function Page({
                   />
                 </figure>
                 <div className='px-2 py-2 rounded-r-lg absolute top-3 left-0 text-primary-foreground bg-primary font-bold grid place-items-center'>
-                  ${item.priceInCurrency}
+                  £{item.priceInCurrency}
                 </div>
                 <CardTitle>{item.title}</CardTitle>
                 <CardDescription className='text-base'>

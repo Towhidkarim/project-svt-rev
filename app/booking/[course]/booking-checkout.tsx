@@ -201,7 +201,7 @@ export default function BookingCheckout({
         disabled={!stripe || loading}
         className='text-primary-foreground w-full p-5 bg-primary mt-2 rounded-md font-bold disabled:opacity-50 disabled:animate-pulse'
       >
-        {!loading ? `Book Exam (Pay $${amount})` : 'Processing...'}
+        {!loading ? `Book Exam (Pay £${amount})` : 'Processing...'}
       </button>
     </form>
   );

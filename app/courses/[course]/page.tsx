@@ -111,7 +111,7 @@ export default function Page({
 
               <div>
                 <span className='text-3xl font-bold'>
-                  ${currentCourseInfo.priceInCurrency}
+                  £{currentCourseInfo.priceInCurrency}
                 </span>
                 <span className='text-muted-foreground'> +VAT applicable</span>
               </div>

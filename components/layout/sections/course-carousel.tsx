@@ -20,14 +20,46 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { getRandomImage } from '@/lib/utils';
+import { type CarouselApi } from '@/components/ui/carousel';
+import { useEffect, useState } from 'react';
 
 export default function CourseCarousel() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+    setInterval(() => {
+      api.scrollNext();
+      console.log('scrollNext');
+    }, 3000);
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+  // useEffect(() => {
+  //   if(current == count)
+  //     api.scrollNext()
+  // });
+
   return (
     <div className='container mx-auto my-20'>
       <Carousel
+        setApi={setApi}
+        opts={{
+          loop: true,
+          active: true,
+        }}
         plugins={[
           Autoplay({
-            delay: 3000,
+            delay: 20000,
           }),
         ]}
         className='relative group mt-14'
@@ -51,7 +83,7 @@ export default function CourseCarousel() {
                       />
                     </figure>
                     <div className='px-2 py-2 rounded-r-lg absolute top-3 left-0 text-primary-foreground bg-primary font-bold grid place-items-center'>
-                      ${item.priceInCurrency}
+                      £{item.priceInCurrency}
                     </div>
                     <CardTitle>{item.title}</CardTitle>
                     <CardDescription className='text-base'>

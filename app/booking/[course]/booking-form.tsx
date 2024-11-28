@@ -34,7 +34,7 @@ export default function BookingForm({
           currency: 'usd',
         }}
       >
-        {/* <CheckoutSection amount={amount} /> */}
+        1{/* <CheckoutSection amount={amount} /> */}
         <BookingCheckout amount={amount} courseName={courseName} />
       </Elements>
     </div>
