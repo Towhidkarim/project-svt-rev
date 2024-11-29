@@ -88,7 +88,7 @@ export default function PaymentForm() {
             options={{
               mode: 'payment',
               amount: convertToSubcurrency(amount),
-              currency: 'usd',
+              currency: 'gbp',
             }}
           >
             <CheckoutSection amount={amount} />
