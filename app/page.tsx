@@ -11,6 +11,7 @@ import { ServicesSection } from '@/components/layout/sections/services';
 import { SponsorsSection } from '@/components/layout/sections/sponsors';
 import { TeamSection } from '@/components/layout/sections/team';
 import { TestimonialSection } from '@/components/layout/sections/testimonial';
+import WhySection from '@/components/layout/sections/whysection';
 import { Suspense } from 'react';
 
 export const metadata = {
@@ -38,9 +39,10 @@ export default function Home() {
       <HeroSection />
       <CourseCarousel />
       <SponsorsSection />
-      <BenefitsSection />
-      <FeaturesSection />
+      {/* <BenefitsSection /> */}
       {/* <ServicesSection /> */}
+      <WhySection />
+      <FeaturesSection />
       <TestimonialSection />
       {/* <TeamSection /> */}
       {/* <CommunitySection /> */}

@@ -19,22 +19,22 @@ interface FeaturesProps {
 const featureList = [
   {
     icon: atheImg,
-    title: 'ATHE',
+    title: '',
     description: '',
   },
   {
     icon: langcertImg,
-    title: 'Language Cert',
+    title: '',
     description: '',
   },
   {
     icon: biiab,
-    title: 'BIIAB',
+    title: '',
     description: '',
   },
   {
     icon: proqImg,
-    title: 'ProQual',
+    title: '',
     description: '',
   },
   // {

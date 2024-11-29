@@ -78,7 +78,7 @@ export default function CourseCarousel() {
                             : getRandomImage()
                         }
                         alt={item.title}
-                        className='object-contain'
+                        className='object-cover'
                         fill
                       />
                     </figure>
