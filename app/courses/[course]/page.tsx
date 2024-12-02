@@ -35,8 +35,8 @@ export default function Page({
   }
   return (
     <>
-      <div className='container flex md:flex-row flex-col gap-10 py-24 sm:py-12'>
-        <div className='w-full md:w-3/5 py-12 shadow-lg border border-muted p-5 rounded-lg'>
+      <section className='container flex flex-wrap gap-10 py-12'>
+        <div className='w-full lg:w-3/5 py-12 col-span-2 shadow-lg border border-muted p-5 rounded-lg'>
           <h1 className='text-2xl md:text-3xl font-semibold '>
             {currentCourseInfo.title}
           </h1>
@@ -96,60 +96,67 @@ export default function Page({
             <p>{currentCourseInfo.entryRequirements}</p>
           </div>
         </div>
-        <div className='flex flex-col md:w-1/5 w-full gap-5 py-12'>
-          <Card
-            className={
-              'sticky drop-shadow-xl w-[350px] h-fit shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary'
-            }
-          >
-            <CardHeader>
-              <CardTitle className='pb-2'>{currentCourseInfo.title}</CardTitle>
+        <div className='flex flex-col lg:w-1/5 w-full gap-5  col-span-1'>
+          <div className='sticky top-0 lg:py-24'>
+            <Card
+              className={
+                ' drop-shadow-xl w-[350px] h-fit shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary'
+              }
+            >
+              <CardHeader>
+                <CardTitle className='pb-2'>
+                  {currentCourseInfo.title}
+                </CardTitle>
 
-              <CardDescription className='pb-4'>
-                {currentCourseInfo.subTitle}
-              </CardDescription>
+                <CardDescription className='pb-4'>
+                  {currentCourseInfo.subTitle}
+                </CardDescription>
 
-              <div>
-                <span className='text-3xl font-bold'>
-                  £{currentCourseInfo.priceInCurrency}
-                </span>
-                <span className='text-muted-foreground'> +VAT applicable</span>
-              </div>
-            </CardHeader>
-
-            <CardContent className='flex'>
-              <div className='space-y-4'>
-                {currentCourseInfo.suitedFor.map((benefit) => (
-                  <span key={benefit} className='flex'>
-                    <Check className='text-primary mr-2' />
-                    <h3>{benefit}</h3>
+                <div>
+                  <span className='text-3xl font-bold'>
+                    £{currentCourseInfo.priceInCurrency}
                   </span>
-                ))}
-              </div>
-            </CardContent>
+                  <span className='text-muted-foreground'>
+                    {' '}
+                    +VAT applicable
+                  </span>
+                </div>
+              </CardHeader>
 
-            <CardFooter className='flex flex-col gap-2'>
-              {/* <Button className='w-full' asChild>
+              <CardContent className='flex'>
+                <div className='space-y-4'>
+                  {currentCourseInfo.suitedFor.map((benefit) => (
+                    <span key={benefit} className='flex'>
+                      <Check className='text-primary mr-2' />
+                      <h3>{benefit}</h3>
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+
+              <CardFooter className='flex flex-col gap-2'>
+                {/* <Button className='w-full' asChild>
                 <Link href={routes.checkout}>Purchase Now</Link>
               </Button> */}
-              {currentCourseInfo.booking ? (
-                <BookingSection id={currentCourseInfo.courseUniqueId} />
-              ) : (
-                <PurchaseSection
-                  id={currentCourseInfo.courseUniqueId}
-                  price={currentCourseInfo.priceInCurrency}
-                  title={currentCourseInfo.title}
-                />
-              )}
-            </CardFooter>
-          </Card>
-          <div className='drop-shadow-xl rounded-lg my-8 py-5 w-[300px] h-fit flex flex-col justify-center items-center shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary'>
-            <h3 className='text-lg opacity-70 '>Talk to Us</h3>
-            <h2 className='text-xl'> About This Course</h2>
-            <h2 className='text-lg'> {contactDetails.phoneNumber}</h2>
+                {currentCourseInfo.booking ? (
+                  <BookingSection id={currentCourseInfo.courseUniqueId} />
+                ) : (
+                  <PurchaseSection
+                    id={currentCourseInfo.courseUniqueId}
+                    price={currentCourseInfo.priceInCurrency}
+                    title={currentCourseInfo.title}
+                  />
+                )}
+              </CardFooter>
+            </Card>
+            <div className='drop-shadow-xl rounded-lg my-8 py-5 w-[300px] h-fit flex flex-col justify-center items-center shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary'>
+              <h3 className='text-lg opacity-70 '>Talk to Us</h3>
+              <h2 className='text-xl'> About This Course</h2>
+              <h2 className='text-lg'> {contactDetails.phoneNumber}</h2>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
       <GetCallback subject={`Callback - ${currentCourseInfo.title}`} />
       <ContactSection />
     </>

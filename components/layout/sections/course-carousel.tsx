@@ -22,11 +22,10 @@ import Link from 'next/link';
 import { getRandomImage } from '@/lib/utils';
 import { type CarouselApi } from '@/components/ui/carousel';
 import { useEffect, useState } from 'react';
+import ProjectCard from '@/components/ui/project-card';
 
 export default function CourseCarousel() {
   const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!api) {
@@ -37,12 +36,12 @@ export default function CourseCarousel() {
       console.log('scrollNext');
     }, 3000);
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
+    // setCount(api.scrollSnapList().length);
+    // setCurrent(api.selectedScrollSnap() + 1);
 
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
+    // api.on('select', () => {
+    //   setCurrent(api.selectedScrollSnap() + 1);
+    // });
   }, [api]);
   // useEffect(() => {
   //   if(current == count)
@@ -64,51 +63,17 @@ export default function CourseCarousel() {
         ]}
         className='relative group mt-14'
       >
-        <CarouselContent className=''>
+        <CarouselContent className='py-5'>
           {courseInfo.map((item, index) => (
             <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3'>
               <div className='p-1'>
-                <Card className='rounded-lg border max-w-[400px] w-full'>
-                  <CardHeader className=' h-[450px]  relative'>
-                    <figure className='relative h-[300px] w-full'>
-                      <Image
-                        src={
-                          item.imageUrl !== ''
-                            ? item.imageUrl
-                            : getRandomImage()
-                        }
-                        alt={item.title}
-                        className='object-cover'
-                        fill
-                      />
-                    </figure>
-                    <div className='px-2 py-2 rounded-r-lg absolute top-3 left-0 text-primary-foreground bg-primary font-bold grid place-items-center'>
-                      £{item.priceInCurrency}
-                    </div>
-                    <CardTitle>{item.title}</CardTitle>
-                    <CardDescription className='text-base'>
-                      {item.subTitle !== ''
-                        ? item.subTitle.substring(0, 128)
-                        : item.caption !== ''
-                        ? item.caption
-                        : item.courseDetails.substring(0, 128)}
-                      ...
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className='flex h-[100px] items-center justify-center p-6'>
-                    <Button asChild>
-                      <Link href={`courses/${item.courseUniqueId}`}>
-                        Learn More
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
+                <ProjectCard {...item} />
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        {/* <CarouselPrevious />
+        <CarouselNext /> */}
       </Carousel>
     </div>
   );

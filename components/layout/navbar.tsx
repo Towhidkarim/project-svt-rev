@@ -39,8 +39,8 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
-    href: '/#testimonials',
-    label: 'Testimonials',
+    href: '/',
+    label: 'Home',
   },
   {
     href: routes.courses,
@@ -197,13 +197,17 @@ export const Navbar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            {routeList.map(({ href, label }) => (
-              <NavigationMenuLink key={href} asChild>
-                <Link href={href} className='text-base px-2' prefetch>
-                  {label}
-                </Link>
-              </NavigationMenuLink>
-            ))}
+            {routeList.map(({ href, label }) => {
+              if (href !== routes.courses)
+                return (
+                  <NavigationMenuLink key={href} asChild>
+                    <Link href={href} className='text-base px-2 mx-2' prefetch>
+                      {label}
+                    </Link>
+                  </NavigationMenuLink>
+                );
+              return;
+            })}
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

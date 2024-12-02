@@ -27,7 +27,7 @@ import { Marquee } from '@devnomic/marquee';
 export const HeroSection = () => {
   const { theme } = useTheme();
   return (
-    <section className=' container  w-svw'>
+    <section className=' container  w-full'>
       <video
         autoPlay
         muted
@@ -41,7 +41,7 @@ export const HeroSection = () => {
         />
         Your browser does not support HTML5 video.
       </video>
-      <div className='w-full aspect-video absolute top-0 left-0 -z-20 bg-black/50 blur-sm min-h-[80vh] '></div>
+      <div className='w-full aspect-video absolute top-0 left-0 -z-20 bg-black/30 blur-sm min-h-[80vh] '></div>
       <div className='grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32'>
         <div className='text-center space-y-8 text-white'>
           <Badge variant='outline' className='text-sm py-2'>
@@ -55,10 +55,11 @@ export const HeroSection = () => {
             <h1 className='text-md:4xl text-2xl my-2 opacity-90'>
               Educate Your Future
             </h1>
-            <h1>
+            <h1 className=' rounded-lg'>
               Study with
               <br />
-              <span className='text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text'>
+              <span className=' text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text'>
+                {/* <span className='text-primary drop-shadow-xl px-2 block shadow-lg'> */}
                 Greenwich Central College
               </span>
             </h1>

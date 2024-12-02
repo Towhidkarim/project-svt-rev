@@ -35,7 +35,7 @@ export default function WhySection() {
       <div className='grid grid-cols-1 md:grid-cols-2 place-items-center place-content-center gap-3 lg:px-32'>
         {featureList.map(({ title, description }) => (
           <div key={title} className='flex flex-row justify-center'>
-            <div className='bg-primary/20 p-2 rounded-xl mt-3 ring-8 ring-primary/10 dark:bg-slate-50/55'>
+            <div className='bg-primary/20 p-2 rounded-xl mt-3 ring-8 ring-primary/10'>
               <CircleCheckBig
                 size={38}
                 strokeWidth={3}

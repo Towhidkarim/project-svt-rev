@@ -85,10 +85,10 @@ export const FeaturesSection = () => {
         succeed in their chosen fields.
       </h3>
 
-      <div className='grid grid-cols-1 md:grid-cols-2  gap-6'>
+      <div className='grid grid-cols-1 px-20 md:grid-cols-2 max-w-[100svw] lg:max-w-[60svw] mx-auto'>
         {featureList.map(({ icon, title, description }) => (
           <div key={title}>
-            <Card className='h-full bg-background border-0 shadow-none '>
+            <Card className='h-full bg-background border-0 shadow-none m-0'>
               <CardHeader className='flex justify-center items-center'>
                 <div className='bg-primary/20 p-2 w-full rounded-xl ring-8 ring-primary/10 dark:bg-slate-50/55'>
                   <Image

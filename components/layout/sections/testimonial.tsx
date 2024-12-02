@@ -9,12 +9,14 @@ import {
 } from '@/components/ui/card';
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Quote, Star } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 interface ReviewProps {
   image: string;
@@ -80,6 +82,28 @@ const reviewList: ReviewProps[] = [
 ];
 
 export const TestimonialSection = () => {
+  const [api, setApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+    setInterval(() => {
+      api.scrollNext();
+      console.log('scrollNext');
+    }, 3000);
+
+    // setCount(api.scrollSnapList().length);
+    // setCurrent(api.selectedScrollSnap() + 1);
+
+    // api.on('select', () => {
+    //   setCurrent(api.selectedScrollSnap() + 1);
+    // });
+  }, [api]);
+  // useEffect(() => {
+  //   if(current == count)
+  //     api.scrollNext()
+  // });
   return (
     <section id='testimonials' className='container py-24 sm:py-32'>
       <div className='text-center mb-8'>
@@ -93,8 +117,11 @@ export const TestimonialSection = () => {
       </div>
 
       <Carousel
+        setApi={setApi}
         opts={{
           align: 'start',
+          loop: true,
+          active: true,
         }}
         className='relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto'
       >

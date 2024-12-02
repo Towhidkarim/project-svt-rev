@@ -79,7 +79,7 @@ export const ContactSection = () => {
 
   return (
     <section id='contact' className='container py-24 sm:py-32'>
-      <section className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+      <section className='flex flex-col-reverse md:flex-row gap-8 justify-center items-center'>
         <div>
           <div className='mb-4'>
             <h2 className='text-lg text-primary mb-2 tracking-wider'>
@@ -136,7 +136,9 @@ export const ContactSection = () => {
         </div>
 
         <Card className='bg-muted/60 dark:bg-card'>
-          <CardHeader className='text-primary text-2xl'> </CardHeader>
+          <CardHeader className='text-primary text-2xl'>
+            Want a Callback? Contact us, leave us your information
+          </CardHeader>
           <CardContent>
             <Form {...form}>
               <form
