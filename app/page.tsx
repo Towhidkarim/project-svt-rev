@@ -5,6 +5,7 @@ import CourseCarousel from '@/components/layout/sections/course-carousel';
 import { FAQSection } from '@/components/layout/sections/faq';
 import { FeaturesSection } from '@/components/layout/sections/features';
 import { FooterSection } from '@/components/layout/sections/footer';
+import GetCallback from '@/components/layout/sections/get-callback';
 import { HeroSection } from '@/components/layout/sections/hero';
 import { PricingSection } from '@/components/layout/sections/pricing';
 import { ServicesSection } from '@/components/layout/sections/services';
@@ -46,6 +47,7 @@ export default function Home() {
       {/* <BenefitsSection /> */}
       {/* <ServicesSection /> */}
       <WhySection />
+      <GetCallback subject='' />
       <TestimonialSection />
       {/* <TeamSection /> */}
       {/* <CommunitySection /> */}

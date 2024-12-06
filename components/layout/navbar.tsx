@@ -46,6 +46,7 @@ import {
 } from '@/lib/courseInfo';
 import logoImage from '@/public/gwc-logo.png';
 import CartButton from './cart-button';
+import { cn } from '@/lib/utils';
 
 interface RouteProps {
   href: string;
@@ -59,16 +60,16 @@ interface FeatureProps {
 
 const routeList: RouteProps[] = [
   {
+    href: '/contact',
+    label: 'Contact',
+  },
+  {
     href: '/',
     label: 'Home',
   },
   {
     href: routes.courses,
     label: 'Courses',
-  },
-  {
-    href: '/contact',
-    label: 'Contact',
   },
   {
     href: '/faq',
@@ -151,8 +152,8 @@ export const Navbar = () => {
           >
             <div>
               <SheetHeader className='mb-4 ml-4'>
-                <SheetTitle className='flex items-center'>
-                  <Link href='/' className='flex items-center'>
+                <SheetTitle className='flex flex-col items-center'>
+                  <Link href='/' className='flex flex-col gap-4 items-center'>
                     <Image
                       className='rounded-lg w-14 h-auto mr-2  text-white'
                       src={logoImage}
@@ -194,7 +195,7 @@ export const Navbar = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <DropdownMenu>
-              <DropdownMenuTrigger className='group flex flex-row'>
+              <DropdownMenuTrigger className='group flex flex-row font-bold hover:bg-muted py-2 px-2 rounded-xl'>
                 Courses{' '}
                 <span className='group-focus:rotate-180 transition'>
                   <ChevronDown strokeWidth={1} />
@@ -245,7 +246,17 @@ export const Navbar = () => {
               if (href !== routes.courses)
                 return (
                   <NavigationMenuLink key={href} asChild>
-                    <Link href={href} className='text-base px-2 mx-2' prefetch>
+                    <Link
+                      href={href}
+                      className={cn(
+                        'text-base px-4 mx-2 font-bold hover:bg-muted py-2 rounded-xl',
+                        {
+                          'rounded-full border-2 border-primary hover:bg-primary hover:text-white px-4 py-2':
+                            label === 'Contact',
+                        }
+                      )}
+                      prefetch
+                    >
                       {label}
                     </Link>
                   </NavigationMenuLink>

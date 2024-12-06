@@ -27,13 +27,13 @@ import { Marquee } from '@devnomic/marquee';
 export const HeroSection = () => {
   const { theme } = useTheme();
   return (
-    <section className=' container  w-full'>
+    <section className=' container  w-full max-h-svh mb-20'>
       <video
         autoPlay
         muted
         loop
         id='myVideo'
-        className=' absolute top-0 left-0 -z-50 w-screen h-auto blur-sm min-h-[80vh] object-cover'
+        className=' absolute top-0 left-0 -z-50 w-screen h-auto blur-sm min-h-[80vh] max-h-svh object-cover'
       >
         <source
           src='https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/videos/hero.mp4'
@@ -41,7 +41,7 @@ export const HeroSection = () => {
         />
         Your browser does not support HTML5 video.
       </video>
-      <div className='w-full aspect-video absolute top-0 left-0 -z-20 bg-black/30 blur-sm min-h-[80vh] '></div>
+      <div className='w-full aspect-video absolute top-0 left-0 -z-20 bg-black/30 blur-sm min-h-[80vh] max-h-svh'></div>
       <div className='grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32'>
         <div className='text-center space-y-8 text-white'>
           {/* <Badge variant='outline' className='text-sm py-2'>

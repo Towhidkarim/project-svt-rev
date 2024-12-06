@@ -1,5 +1,13 @@
 import { Separator } from '@/components/ui/separator';
-import { ChevronsDownIcon, Phone, Send, SendIcon } from 'lucide-react';
+import {
+  ChevronsDownIcon,
+  Facebook,
+  Instagram,
+  Phone,
+  Send,
+  SendIcon,
+  Twitter,
+} from 'lucide-react';
 import Image from 'next/image';
 import logoImage from '@/public/gwc-logo.png';
 import Link from 'next/link';
@@ -114,7 +122,10 @@ export const FooterSection = () => {
                 href={footerOptions.facebook}
                 className='dark opacity-60 hover:opacity-100'
               >
-                Facebook
+                <div className='flex flex-row gap-3 items-center'>
+                  <Facebook />
+                  Facebook
+                </div>
               </Link>
             </div>
 
@@ -123,7 +134,10 @@ export const FooterSection = () => {
                 href={footerOptions.insta}
                 className='dark opacity-60 hover:opacity-100'
               >
-                Instagram
+                <div className='flex flex-row gap-3 items-center'>
+                  <Instagram />
+                  Instagram
+                </div>
               </Link>
             </div>
             <div>
@@ -131,7 +145,10 @@ export const FooterSection = () => {
                 href={footerOptions.twitter}
                 className='dark opacity-60 hover:opacity-100'
               >
-                Twitter
+                <div className='flex flex-row gap-3 items-center'>
+                  <Twitter />
+                  Twitter
+                </div>
               </Link>
             </div>
           </div>

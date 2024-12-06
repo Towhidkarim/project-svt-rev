@@ -77,11 +77,11 @@ const featureList = [
 
 export const FeaturesSection = () => {
   return (
-    <section id='features' className='container py-24 sm:py-32'>
+    <section id='features' className='container pt-28 pb-24 sm:pb-32'>
       {/* <h2 className='text-lg text-primary text-center mb-2 tracking-wider'>
         Features
       </h2> */}
-
+      <br />
       <h2 className='text-3xl md:text-4xl text-center font-bold mb-4'>
         Awarding Body
       </h2>
