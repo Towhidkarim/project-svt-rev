@@ -8,6 +8,15 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { contactDetails, routes } from '@/lib/constants';
@@ -36,6 +45,34 @@ export default function Page({
   return (
     <>
       <section className='container flex flex-wrap gap-10 py-12'>
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href={routes.courses}>Courses</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink
+                href={`/courses?cat=${currentCourseInfo.category}`}
+              >
+                {currentCourseInfo.category}
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{currentCourseInfo.title}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+        <div className='w-full rounded-2xl p-14 bg-primary'>
+          <h1 className='text-4xl md:text-5xl font-bold text-white'>
+            {currentCourseInfo.title}
+          </h1>
+        </div>
         <div className='w-full lg:w-3/5 py-12 col-span-2 shadow-lg border border-muted p-5 rounded-lg'>
           <h1 className='text-2xl md:text-3xl font-semibold '>
             {currentCourseInfo.title}

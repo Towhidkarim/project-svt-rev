@@ -1,5 +1,5 @@
 import React from 'react';
-import sideImg from '@/public/diplomaBBAskills.png';
+import sideImg from '@/public/learn-min.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { routes } from '@/lib/constants';

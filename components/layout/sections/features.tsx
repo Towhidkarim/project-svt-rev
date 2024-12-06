@@ -4,6 +4,13 @@ import langcertImg from '@/public/awards/langcert.webp';
 import biiab from '@/public/awards/biiab.jpeg';
 import proqImg from '@/public/awards/proqual.jpeg';
 import icoImg from '@/public/awards/ico-min.jpg';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from '@/components/ui/carousel';
 
 // import btecImg from '@/public/awards/btec.png';
 // import cimaImg from '@/public/awards/cima.png';
@@ -92,29 +99,35 @@ export const FeaturesSection = () => {
         succeed in their chosen fields.
       </h3>
 
-      <div className='flex flex-col md:flex-row max-w-[100svw] justify-center items-center mx-auto'>
-        {featureList.map(({ icon, title, description }, index) => (
-          <div key={index}>
-            <Card className='h-full bg-background border-0 shadow-none m-0'>
-              <CardHeader className='flex justify-center items-center'>
-                <div className='bg-primary/20 p-2 w-full rounded-xl ring-8 ring-primary/10 dark:bg-slate-50/55'>
-                  <Image
-                    src={icon}
-                    alt={title}
-                    className='w-[212px] h-[113px] object-contain mx-auto'
-                  />
-                </div>
+      <Carousel className=''>
+        <CarouselContent>
+          {featureList.map(({ icon, title, description }, index) => (
+            <div key={index} className=''>
+              <CarouselItem className='md:basis-1/2 lg:basis-1/3'>
+                <Card className='h-full w-[250px] bg-background border-0 shadow-none m-0'>
+                  <CardHeader className='flex justify-center items-center'>
+                    <div className='bg-primary/20 p-2 w-full rounded-xl ring-8 ring-primary/10 dark:bg-slate-50/55'>
+                      <Image
+                        src={icon}
+                        alt={title}
+                        className='w-[212px] h-[113px] object-contain mx-auto'
+                      />
+                    </div>
 
-                <CardTitle className=''>{title}</CardTitle>
-              </CardHeader>
+                    <CardTitle className=''>{title}</CardTitle>
+                  </CardHeader>
 
-              <CardContent className='text-muted-foreground text-center'>
-                {description}
-              </CardContent>
-            </Card>
-          </div>
-        ))}
-      </div>
+                  <CardContent className='text-muted-foreground text-center'>
+                    {description}
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            </div>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </section>
   );
 };

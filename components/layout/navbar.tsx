@@ -201,7 +201,7 @@ export const Navbar = () => {
                   <ChevronDown strokeWidth={1} />
                 </span>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className='translate-x-10 rounded-xl'>
+              <DropdownMenuContent className='absolute  left-1/2 -translate-x-1/3 rounded-xl'>
                 <div className='flex flex-row gap-10 mx-10 '>
                   {groupedItems.map((item, index) => (
                     <div key={index} className='flex flex-col'>

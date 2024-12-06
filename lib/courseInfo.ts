@@ -1,11 +1,9 @@
 export const courseCategories = [
-  'Security Courses',
-  'Language Courses',
-  'Health and Social Care',
-  'Business Course',
-  'SERU Course',
+  'LEVEL-3 Diploma',
+  'English Language Courses',
   'Construction Course',
-  'Vocational Courses',
+  'Security Courses',
+  'SERU Course',
 ] as const;
 
 export type TCourseInfoType = {

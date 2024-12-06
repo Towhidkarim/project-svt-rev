@@ -59,7 +59,7 @@ export default function CourseCarousel() {
   // });
 
   return (
-    <div className='container mx-auto my-20 mt-10'>
+    <div className='container mx-auto my-20 mt-20'>
       <h1 className='md:text-4xl text-center text-3xl font-bold'>
         Explore Our Courses
       </h1>

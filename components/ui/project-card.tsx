@@ -38,7 +38,7 @@ export default function ProjectCard({
           <div className='px-2 border border-l-0 py-3 rounded-r-lg text-lg absolute top-3 left-0 text-primary-foreground bg-primary font-bold grid place-items-center'>
             £{priceInCurrency}
           </div>
-          <CardTitle className='flex flex-row justify-between mt-3'>
+          <CardTitle className='flex flex-row justify-between my-3'>
             <span className='text-xl font-bold pr-3'>{title}</span>
             <div className='text-xl flex flex-col '>
               <span className='text-sm text-muted-foreground text-right'>
