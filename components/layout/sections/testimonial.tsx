@@ -30,53 +30,51 @@ const reviewList: ReviewProps[] = [
   {
     image: 'https://i.pravatar.cc/250?img=58',
     name: 'James Parker',
-    userName: 'Product Manager',
+    userName: 'From Labourer Card Course',
     comment:
-      'The course offered a comprehensive understanding of leadership skills, and I particularly appreciated the practical approach to problem-solving. My tutor, Emma, provided continuous support and feedback. ',
+      'The course offered a comprehensive understanding of leadership skills, and I particularly appreciated the practical approach to problem-solving. The materials were easy to follow and highly effective.',
     rating: 5.0,
   },
   {
     image: 'https://www.linkedin.com/in/leopoldo-miranda/',
     name: 'Sophia Collins',
-    userName: 'Cybersecurity Analyst',
+    userName: 'From ESOL A1 Course',
     comment:
-      'I gained so much from this course. The resources were clear, and the assignments were challenging but rewarding. The feedback I received from my tutor, Sarah, was always constructive and helped me improve my skills ',
+      'I gained so much from this course. The resources were clear, and the assignments were challenging but rewarding. The structure helped me build confidence in my skills and knowledge.',
     rating: 4.8,
   },
-
   {
     image:
       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     name: 'Adam Johnson',
-    userName: 'GreenTech Innovations',
+    userName: 'From SERU Course',
     comment:
-      'I cant thank this team enough for the knowledge and support theyve given me. The course content was thorough, and I felt confident in my learning journey. Special thanks to my tutor, Karen, for her unwavering support throughout.',
+      'I can’t thank this team enough for the knowledge and support they’ve given me. The course content was thorough, and I felt confident in my learning journey every step of the way.',
     rating: 4.9,
   },
   {
     image: 'https://x.com/leo_mirand4',
     name: 'Ethan Parker',
-    userName: 'Data Scientist',
+    userName: 'From Adult Care Course',
     comment:
-      'The course was a great experience, and it gave me the tools to make informed decisions in my career. My tutor, Mark, was always available to help and gave excellent feedback that helped me improve at every stage',
+      'The course was a great experience, and it gave me the tools to make informed decisions in my career. The feedback and guidance provided helped me improve significantly at every stage.',
     rating: 5.0,
   },
   {
     image: 'https://www.linkedin.com/in/leopoldo-miranda/',
     name: 'Ava Mitchell',
-    userName: 'IT Project Manager',
+    userName: 'From Labourer Card Course',
     comment:
-      'I feel so lucky to have had Keith as my Tutor. His patience, guidance and encouragement are second to none. I found the recourses, structure and tutor feedback valuable and after each module I was pushed to complete another. With an attitude of gratitude,',
+      'I feel so lucky to have taken this course. The resources, structure, and guidance were invaluable, and I felt encouraged and motivated to keep pushing forward after each module.',
     rating: 5.0,
   },
   {
     image:
       'https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-
     name: 'Isabella Reed',
-    userName: 'DevOps Engineer',
+    userName: 'From ESOL A1 Course',
     comment:
-      'The course was really helpful and allowed me to broaden my thinking when it comes to reviewing/making business decisions. Cheryl was a great help and offered exceptional support and guidance when required. I would highly recommend this course to anyone lo',
+      'The course was really helpful and allowed me to broaden my thinking when it comes to reviewing and making decisions. The guidance and resources provided were exceptional and easy to understand.',
     rating: 4.9,
   },
 ];
