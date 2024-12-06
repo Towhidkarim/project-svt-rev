@@ -1,6 +1,6 @@
 'use client';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-
+import { useLocalStorage } from './hooks/useLocalStorage';
 interface CartItem {
   id: string;
   name: string;

@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={cn('min-h-screen bg-background', inter.className)}>
         <ThemeProvider
           attribute='class'
-          defaultTheme='system'
+          defaultTheme='light'
           enableSystem
           disableTransitionOnChange
         >
@@ -38,8 +38,9 @@ export default function RootLayout({
             {children}
 
             <ChatButton />
-
-            <FooterSection />
+            <div className='dark dark:bg-card/85 bg-card/95 w-full '>
+              <FooterSection />
+            </div>
           </CartProvider>
         </ThemeProvider>
       </body>

@@ -8,7 +8,7 @@ export const courseCategories = [
   'Vocational Courses',
 ] as const;
 
-type TCourseInfoType = {
+export type TCourseInfoType = {
   category: (typeof courseCategories)[number];
   courseUniqueId: string;
   imageUrl: string;

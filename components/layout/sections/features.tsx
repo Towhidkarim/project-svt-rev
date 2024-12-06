@@ -3,6 +3,8 @@ import atheImg from '@/public/awards/athe.png';
 import langcertImg from '@/public/awards/langcert.webp';
 import biiab from '@/public/awards/biiab.jpeg';
 import proqImg from '@/public/awards/proqual.jpeg';
+import icoImg from '@/public/awards/ico-min.jpg';
+
 // import btecImg from '@/public/awards/btec.png';
 // import cimaImg from '@/public/awards/cima.png';
 // import iapImg from '@/public/awards/iap.png';
@@ -34,6 +36,11 @@ const featureList = [
   },
   {
     icon: proqImg,
+    title: '',
+    description: '',
+  },
+  {
+    icon: icoImg,
     title: '',
     description: '',
   },
@@ -71,9 +78,9 @@ const featureList = [
 export const FeaturesSection = () => {
   return (
     <section id='features' className='container py-24 sm:py-32'>
-      <h2 className='text-lg text-primary text-center mb-2 tracking-wider'>
+      {/* <h2 className='text-lg text-primary text-center mb-2 tracking-wider'>
         Features
-      </h2>
+      </h2> */}
 
       <h2 className='text-3xl md:text-4xl text-center font-bold mb-4'>
         Awarding Body
@@ -85,9 +92,9 @@ export const FeaturesSection = () => {
         succeed in their chosen fields.
       </h3>
 
-      <div className='grid grid-cols-1 px-20 md:grid-cols-2 max-w-[100svw] lg:max-w-[60svw] mx-auto'>
-        {featureList.map(({ icon, title, description }) => (
-          <div key={title}>
+      <div className='flex flex-col md:flex-row max-w-[100svw] justify-center items-center mx-auto'>
+        {featureList.map(({ icon, title, description }, index) => (
+          <div key={index}>
             <Card className='h-full bg-background border-0 shadow-none m-0'>
               <CardHeader className='flex justify-center items-center'>
                 <div className='bg-primary/20 p-2 w-full rounded-xl ring-8 ring-primary/10 dark:bg-slate-50/55'>

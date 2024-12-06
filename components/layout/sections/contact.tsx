@@ -136,8 +136,12 @@ export const ContactSection = () => {
         </div>
 
         <Card className='bg-muted/60 dark:bg-card'>
-          <CardHeader className='text-primary text-2xl'>
-            Want a Callback? Contact us, leave us your information
+          <CardHeader className='text-primary '>
+            <h1 className='md:text-4xl text-3xl font-bold'>Let us call you</h1>
+            <h4 className='text-sm text-muted-foreground'>
+              Fill the information bellow and send your query, we will contact
+              you back
+            </h4>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -219,11 +223,10 @@ export const ContactSection = () => {
                     name='message'
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel>Phone Number</FormLabel>
                         <FormControl>
-                          <Textarea
-                            rows={5}
-                            placeholder='Your message...'
+                          <Input
+                            placeholder='Phone Number...'
                             className='resize-none'
                             {...field}
                           />

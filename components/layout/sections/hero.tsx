@@ -44,15 +44,15 @@ export const HeroSection = () => {
       <div className='w-full aspect-video absolute top-0 left-0 -z-20 bg-black/30 blur-sm min-h-[80vh] '></div>
       <div className='grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32'>
         <div className='text-center space-y-8 text-white'>
-          <Badge variant='outline' className='text-sm py-2'>
+          {/* <Badge variant='outline' className='text-sm py-2'>
             <span className='mr-2 text-primary'>
               <Badge>New</Badge>
             </span>
             <span className='text-white'> A New Course is Out! </span>
-          </Badge>
+          </Badge> */}
 
           <div className='max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold'>
-            <h1 className='text-md:4xl text-2xl my-2 opacity-90'>
+            <h1 className='text-md:4xl text-2xl my-2 opacity-90 mx-auto w-[300px] border rounded-full p-1.5 bg-white/10'>
               Educate Your Future
             </h1>
             <h1 className=' rounded-lg'>

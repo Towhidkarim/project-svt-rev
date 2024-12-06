@@ -35,16 +35,16 @@ export default function ProjectCard({
           />
         </figure>
         <div className='mx-4 mt-4'>
-          {/* <div className='px-2 py-2 rounded-r-lg absolute top-3 left-0 text-primary-foreground bg-primary font-bold grid place-items-center'>
+          <div className='px-2 border border-l-0 py-3 rounded-r-lg text-lg absolute top-3 left-0 text-primary-foreground bg-primary font-bold grid place-items-center'>
             £{priceInCurrency}
-          </div> */}
+          </div>
           <CardTitle className='flex flex-row justify-between mt-3'>
             <span className='text-xl font-bold pr-3'>{title}</span>
             <div className='text-xl flex flex-col '>
               <span className='text-sm text-muted-foreground text-right'>
-                From
+                {/* From */}
               </span>
-              <span>£{priceInCurrency}</span>
+              {/* <span>£{priceInCurrency}</span> */}
             </div>
           </CardTitle>
         </div>

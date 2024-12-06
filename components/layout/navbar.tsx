@@ -1,5 +1,12 @@
 'use client';
-import { ChevronsDown, Github, Menu, ShoppingCart } from 'lucide-react';
+import {
+  ArrowDown,
+  ChevronDown,
+  ChevronsDown,
+  Github,
+  Menu,
+  ShoppingCart,
+} from 'lucide-react';
 import React from 'react';
 import {
   Sheet,
@@ -9,6 +16,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '../ui/sheet';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+
 import { Separator } from '../ui/separator';
 import {
   NavigationMenu,
@@ -23,7 +39,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ToggleTheme } from './toogle-theme';
 import { categories, routes } from '@/lib/constants';
-import { courseCategories } from '@/lib/courseInfo';
+import {
+  courseCategories,
+  courseInfo,
+  TCourseInfoType,
+} from '@/lib/courseInfo';
 import logoImage from '@/public/gwc-logo.png';
 import CartButton from './cart-button';
 
@@ -54,6 +74,10 @@ const routeList: RouteProps[] = [
     href: '/faq',
     label: 'FAQ',
   },
+  {
+    href: '/about',
+    label: 'About Us',
+  },
 ];
 
 const featureList: FeatureProps[] = [
@@ -75,6 +99,31 @@ const featureList: FeatureProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const groupByCategory = (items: TCourseInfoType[]) => {
+    const grouped = items.reduce<Record<string, TCourseInfoType[]>>(
+      (acc, item) => {
+        const { category } = item;
+
+        // Check if the category already exists in the accumulator
+        if (!acc[category]) {
+          acc[category] = [];
+        }
+
+        // Push the item into the appropriate category array
+        acc[category].push(item);
+        return acc;
+      },
+      {}
+    );
+
+    // Convert the grouped object into an array of { category, items } objects
+    return Object.keys(grouped).map((category) => ({
+      category,
+      items: grouped[category],
+    }));
+  };
+  const groupedItems = groupByCategory(courseInfo);
+
   return (
     <header className='shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card'>
       <Link href='/' className='font-bold text-lg flex items-center'>
@@ -143,57 +192,52 @@ export const Navbar = () => {
       {/* <!-- Desktop --> */}
       <NavigationMenu className='hidden lg:block mx-auto'>
         <NavigationMenuList>
-          {/* <NavigationMenuItem>
-            <NavigationMenuTrigger className='bg-card text-base'>
-              Features
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className='grid w-[600px] grid-cols-2 gap-5 p-4'>
-                <Image
-                  src={logoImage}
-                  alt='logo'
-                  className='h-full w-full rounded-md object-contain'
-                  width={600}
-                  height={600}
-                />
-                <ul className='flex flex-col gap-2'>
-                  {featureList.map(({ title, description }) => (
-                    <li
-                      key={title}
-                      className='rounded-md p-3 text-sm hover:bg-muted'
-                    >
-                      <p className='mb-1 font-semibold leading-none text-foreground'>
-                        {title}
-                      </p>
-                      <p className='line-clamp-2 text-muted-foreground'>
-                        {description}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem> */}
-
           <NavigationMenuItem>
-            <NavigationMenuTrigger className='bg-card text-base'>
-              Courses
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className='grid w-[400px] grid-cols-3 gap-5 p-4'>
-                {courseCategories.map((item, index) => (
-                  <Link
-                    href={`/courses?cat=${item}`}
-                    key={index}
-                    className='rounded-md p-3 text-sm hover:bg-muted'
-                  >
-                    <p className='mb-1 tracking-wide leading-5 capitalize font-semibold text-foreground'>
-                      {item}
-                    </p>
-                  </Link>
-                ))}
-              </div>
-            </NavigationMenuContent>
+            <DropdownMenu>
+              <DropdownMenuTrigger className='group flex flex-row'>
+                Courses{' '}
+                <span className='group-focus:rotate-180 transition'>
+                  <ChevronDown strokeWidth={1} />
+                </span>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className='translate-x-10 rounded-xl'>
+                <div className='flex flex-row gap-10 mx-10 '>
+                  {groupedItems.map((item, index) => (
+                    <div key={index} className='flex flex-col'>
+                      <h1 className='text-base my-4 font-semibold'>
+                        {item.category}
+                      </h1>
+                      <div className='flex flex-col gap-4 text-sm w-44'>
+                        {item.items.map((v, i) => (
+                          <Link
+                            href={`/courses/${v.courseUniqueId}`}
+                            className=' hover:underline'
+                            key={i + 20}
+                          >
+                            {v.title.slice(0, 45)}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+
+                  {/* {courseCategories.map((item, index) => (
+                    <DropdownMenuItem key={index}>
+                      <Link
+                        href={`/courses?cat=${item}`}
+                        className='rounded-md p-1.5 text-sm hover:bg-muted'
+                      >
+                        <p className='mb-1 tracking-wide leading-5 capitalize font-semibold text-foreground'>
+                          {item}
+                        </p>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))} */}
+                </div>
+
+                <DropdownMenuItem></DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </NavigationMenuItem>
 
           <NavigationMenuItem>

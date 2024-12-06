@@ -37,19 +37,22 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <br />
+      <br />
+      <br />
+      <FeaturesSection />
       <CourseCarousel />
-      <SponsorsSection />
+      {/* <SponsorsSection /> */}
       {/* <BenefitsSection /> */}
       {/* <ServicesSection /> */}
       <WhySection />
-      <FeaturesSection />
       <TestimonialSection />
       {/* <TeamSection /> */}
       {/* <CommunitySection /> */}
       {/* <PricingSection /> */}
-      <Suspense>
+      {/* <Suspense>
         <ContactSection />
-      </Suspense>
+      </Suspense> */}
       {/* <FAQSection /> */}
     </>
   );
