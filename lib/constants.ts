@@ -15,11 +15,11 @@ export const routes = {
 };
 
 //in international format
-export const whatsappPhoneNumber = '8801777777777';
+export const whatsappPhoneNumber = '+4407782372020';
 
 export const contactDetails = {
   address: 'Bellerive House, 3 Muirfield Cres E14 9SZ, London',
-  phoneNumber: '+44 2080669670',
+  phoneNumber: '+442080669670',
   mail: 'info@greenwichcentralcollege.com',
 };
 
@@ -31,9 +31,9 @@ export const contactSubjects = [
 ];
 
 export const footerOptions = {
-  facebook: '',
+  facebook: 'https://www.facebook.com/greenwichcentralcollegee/',
   twitter: '',
-  insta: '',
+  insta: 'https://www.instagram.com/greenwichcentralcollege/',
 };
 
 export const aboutInfo = {
