@@ -10,6 +10,7 @@ import { HeroSection } from '@/components/layout/sections/hero';
 import { PricingSection } from '@/components/layout/sections/pricing';
 import { ServicesSection } from '@/components/layout/sections/services';
 import { SponsorsSection } from '@/components/layout/sections/sponsors';
+import StudyWithSection from '@/components/layout/sections/studywithsection';
 import { TeamSection } from '@/components/layout/sections/team';
 import { TestimonialSection } from '@/components/layout/sections/testimonial';
 import WhySection from '@/components/layout/sections/whysection';
@@ -41,11 +42,12 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <FeaturesSection />
       <CourseCarousel />
+      <FeaturesSection />
       {/* <SponsorsSection /> */}
       {/* <BenefitsSection /> */}
       {/* <ServicesSection /> */}
+      <StudyWithSection />
       <WhySection />
       <GetCallback subject='' />
       <TestimonialSection />

@@ -9,7 +9,6 @@ export default function Page() {
       <Suspense>
         <ContactSection />
       </Suspense>
-      <FooterSection />
     </section>
   );
 }

@@ -38,7 +38,7 @@ export default function RootLayout({
             {children}
 
             <ChatButton />
-            <div className='dark dark:bg-card/85 bg-card/95 w-full '>
+            <div className='dark dark:bg-[#013466] bg-[#013466] w-full '>
               <FooterSection />
             </div>
           </CartProvider>

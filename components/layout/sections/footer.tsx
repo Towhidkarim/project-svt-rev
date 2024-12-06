@@ -9,7 +9,7 @@ import {
   Twitter,
 } from 'lucide-react';
 import Image from 'next/image';
-import logoImage from '@/public/gwc-logo.png';
+import logoImage from '@/public/logo-transparent.png';
 import Link from 'next/link';
 import waImage from '@/public/whatsapp-logo.svg';
 import {
@@ -22,7 +22,7 @@ import {
 export const FooterSection = () => {
   return (
     <footer id='footer' className='container py-24 sm:py-32'>
-      <div className='dark p-10 bg-card/95 border border-secondary text-white rounded-2xl'>
+      <div className='dark p-10 bg-[#013466] border border-white text-white rounded-2xl'>
         <div className='flex flex-row flex-wrap justify-between gap-x-12 gap-y-8'>
           <div className='dark col-span-3 xl:col-span-2'>
             <Link href='#' className='flex font-bold items-center'>
@@ -39,7 +39,7 @@ export const FooterSection = () => {
           <div className='flex flex-col gap-2 col-span-3'>
             <h3 className='font-bold text-lg'>Contact</h3>
             {/* <div>
-              <Link href='#' className='opacity-60 hover:opacity-100'>
+              <Link href='#' className='opacity-80 hover:opacity-100'>
                 Github
               </Link>
             </div> */}
@@ -47,11 +47,13 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={`mailto:${contactDetails.mail}`}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100 max-w-44 '
               >
-                <div className='flex flex-row gap-3'>
+                <div className='flex flex-row gap-3 '>
                   <SendIcon />
-                  {contactDetails.mail}
+                  <span className=' max-w-56 lg:max-w-72  break-words lg:text-clip'>
+                    {contactDetails.mail}
+                  </span>
                 </div>
               </Link>
             </div>
@@ -59,7 +61,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={`tel:${contactDetails.phoneNumber}`}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 <div className='flex flex-row gap-3'>
                   <Phone />
@@ -70,7 +72,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={`https://wa.me/${whatsappPhoneNumber}`}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 <div className='flex flex-row gap-3 items-center'>
                   <Image src={waImage} alt='' className='size-8' />
@@ -79,7 +81,7 @@ export const FooterSection = () => {
               </Link>
             </div>
             {/* <div>
-              <Link href='#' className='opacity-60 hover:opacity-100'>
+              <Link href='#' className='opacity-80 hover:opacity-100'>
                 Facebook
               </Link>
             </div> */}
@@ -90,7 +92,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={routes.contact}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 Contact Us
               </Link>
@@ -99,7 +101,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={routes.faq}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 FAQ
               </Link>
@@ -108,7 +110,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={routes.contact}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 Feedback
               </Link>
@@ -120,7 +122,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={footerOptions.facebook}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 <div className='flex flex-row gap-3 items-center'>
                   <Facebook />
@@ -132,7 +134,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={footerOptions.insta}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 <div className='flex flex-row gap-3 items-center'>
                   <Instagram />
@@ -143,7 +145,7 @@ export const FooterSection = () => {
             <div>
               <Link
                 href={footerOptions.twitter}
-                className='dark opacity-60 hover:opacity-100'
+                className='dark opacity-80 hover:opacity-100'
               >
                 <div className='flex flex-row gap-3 items-center'>
                   <Twitter />
@@ -179,14 +181,14 @@ export const FooterSection = () => {
           ></iframe> */}
         </div>
 
-        <Separator className='my-6' />
-        <section className=''>
+        <Separator className='my-6 bg-white' />
+        <section className='text-center'>
           <h3 className=''>
             &copy; 2024 All Rights are Reserved
             <Link
               target='_blank'
               href='/'
-              className='text-primary transition-all border-primary hover:border-b-2 ml-1'
+              className='text-blue-300 mx-auto transition-all border-white hover:border-b-2 ml-1'
             >
               Greenwich Central College
             </Link>

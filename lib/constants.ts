@@ -11,6 +11,7 @@ export const routes = {
   contact: '/contact',
   faq: '/faq',
   checkout: '/checkout',
+  about: '/about',
 };
 
 //in international format
