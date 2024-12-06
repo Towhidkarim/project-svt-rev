@@ -88,12 +88,12 @@ export default function CourseCarousel() {
         {/* <CarouselPrevious />
         <CarouselNext /> */}
       </Carousel>
-      {/* <Link
+      <Link
         href={routes.courses}
         className='hover:underline text-primary mt-12'
       >
         {`View All Courses -->`}
-      </Link> */}
+      </Link>
     </div>
   );
 }

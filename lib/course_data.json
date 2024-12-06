@@ -2,7 +2,7 @@
   {
     "category": "Security Courses",
     "courseUniqueId": "01",
-    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/door-supervisor.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/door.jpg",
     "title": "Level 2 Door Supervisor",
     "subTitle": "Advance your career in the security industry",
     "courseDetails": "",
@@ -25,7 +25,7 @@
     "courseStructure": "The learning material is provided electronically via the \"Learning Assistant Portal\" which shows your progress throughout and allows you to instantly message your assessor.  The assessment team will monitor your progress through our user-friendly platform to offer you support and guidance throughout the course. There is unlimited support and you can call, message or email your assessor as often as you wish. ",
     "pricing": "The cost of the course is $350.00+VAT. ",
     "priceInCurrency": 350,
-    "assesment": " ",
+    "assesment": "",
     "duration": "Varies",
     "entryRequirements": "Mentioned Above",
     "why": ""
@@ -33,7 +33,7 @@
   {
     "category": "Security Courses",
     "courseUniqueId": "02",
-    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/cctv-supervisor.jpg",
+    "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/cam.jpg",
     "title": "CCTV Supervisor",
     "subTitle": "Take your career in the security industry to the next level",
     "courseDetails": "",
@@ -144,7 +144,7 @@
     "why": "This is a question that our team are often asked, there are many reasons but here are the main reasons to choose Association of Learning:No hidden charges, the price you see includes everything, from tutoring to certification.Our average tutor marking time is 3 working days (most providers are 10+).Our customers have rated us ‘Excellent’ on Trustpilot.Our courses are up to date. Many providers create course content and fail to keep it up to date.We are open later than any other home learning provider.As many submissions as you need to complete, many providers cap how many times you can submit work.All courses are fully endorsed by external awarding organisations.14 day money back guarantee or course switch.If you need any more reasons to choose Association of Learning, contact our team!"
   },
   {
-    "category": "Health and Social Care",
+    "category": "LEVEL-3 Diploma",
     "courseUniqueId": "2",
     "imageUrl": "https://raw.githubusercontent.com/Towhidkarim/project-svt-rev/refs/heads/main/public/c.jpg",
     "title": "Adult Care Diploma Level 3 (RQF)",
@@ -267,27 +267,7 @@
     "entryRequirements": "",
     "why": ""
   },
-  {
-    "category": "Construction Course",
-    "courseUniqueId": "7",
-    "imageUrl": "",
-    "title": "SERU Mock Test Pack No.3 & No.4",
-    "subTitle": "",
-    "caption": "",
-    "courseDetails": "This is ideal for anyone who has already read through the TfL PHV Driver Handbook and wants to test their knowledge and see if they can complete the SERU mock test within the time limits.Just like the actual test, you will get 45 minutes to complete the SERU mock test, you will have a total of 36 questions, which are split up into simple multiple-choice questions, short passage multiple-choice questions andcomplete sentences dragging the correct words into the blank spaces.  To pass the SERU assessment, you need to get a minimum of 60%.You get 4 chances to pass our online SERU mock test, on the real SERU assessment you will get 1 attempt and if you fail that, then you will need to rebook your test for the second and final attempt.If you haven’t read the PHV Driver Handbook already, you can take one of our online SERU assessment training courses which guides you through all the content and tests your knowledge along the way.",
-    "suitedFor": [],
-    "forYouIf": [],
-    "booking": false,
-    "covers": "Full access to our TfL SERU online mock tests including multiple choice and drag & drop questions just like the real TfL SERU assessment. You will be able to access the mock test 24/7 and on any device including your mobile phone.  Real TfL SERU Questions.  Timed mock test.  24/7 Access.  Works on PC or Mobile Device.  4 Attempt.",
-    "courseStructure": "",
 
-    "pricing": "£14.99",
-    "priceInCurrency": 14.99,
-    "assesment": "",
-    "duration": "",
-    "entryRequirements": "",
-    "why": ""
-  },
   {
     "category": "LEVEL-3 Diploma",
     "courseUniqueId": "8",
