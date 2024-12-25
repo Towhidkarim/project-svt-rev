@@ -100,6 +100,7 @@ const featureList: FeatureProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [dropdownOpen, setDropdownOpen] = React.useState(false);
   const groupByCategory = (items: TCourseInfoType[]) => {
     const grouped = items.reduce<Record<string, TCourseInfoType[]>>(
       (acc, item) => {
@@ -194,7 +195,10 @@ export const Navbar = () => {
       <NavigationMenu className='hidden lg:block mx-auto'>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <DropdownMenu>
+            <DropdownMenu
+              onOpenChange={(value) => setDropdownOpen(value)}
+              open={dropdownOpen}
+            >
               <DropdownMenuTrigger className='group flex flex-row font-bold hover:bg-muted py-2 px-2 rounded-xl'>
                 Courses{' '}
                 <span className='group-focus:rotate-180 transition'>
@@ -211,6 +215,7 @@ export const Navbar = () => {
                       <div className='flex flex-col gap-4 text-sm w-44'>
                         {item.items.map((v, i) => (
                           <Link
+                            onClick={() => setDropdownOpen(false)}
                             href={`/courses/${v.courseUniqueId}`}
                             className=' hover:underline'
                             key={i + 20}

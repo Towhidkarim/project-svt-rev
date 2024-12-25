@@ -129,7 +129,7 @@ export const TestimonialSection = () => {
               key={review.name}
               className='md:basis-1/2 lg:basis-1/3'
             >
-              <Card className='bg-muted/50 dark:bg-card rounded-2xl'>
+              <Card className='bg-muted/50 dark:bg-card rounded-2xl h-[400px] flex flex-col justify-between'>
                 <CardContent className='pt-6 pb-0'>
                   <div className='flex gap-1 pb-6'>
                     {/* <Star className='size-4 fill-primary text-primary' />
@@ -142,7 +142,7 @@ export const TestimonialSection = () => {
                   {`"${review.comment}"`}
                 </CardContent>
 
-                <CardHeader>
+                <CardHeader className='h-28'>
                   <div className='flex flex-row items-center gap-4'>
                     <Avatar>
                       <AvatarImage

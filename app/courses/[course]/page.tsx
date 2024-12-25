@@ -26,6 +26,8 @@ import PurchaseSection from './purchase-section';
 import Link from 'next/link';
 import BookingSection from './booking-section';
 import GetCallback from '@/components/layout/sections/get-callback';
+import Image from 'next/image';
+import { getRandomImage } from '@/lib/utils';
 
 export default function Page({
   params,
@@ -73,7 +75,19 @@ export default function Page({
             {currentCourseInfo.title}
           </h1>
         </div>
-        <div className='w-full lg:w-3/5 py-12 col-span-2 shadow-lg border border-muted p-5 rounded-lg'>
+        <div className='w-full lg:w-3/5 pb-12 col-span-2 shadow-lg border border-muted p-5 rounded-lg'>
+          <figure className='relative w-full h-[350px] mb-10 rounded-xl'>
+            <Image
+              src={
+                currentCourseInfo.imageUrl === ''
+                  ? getRandomImage()
+                  : currentCourseInfo.imageUrl
+              }
+              alt=''
+              className='w-full object-cover rounded-xl'
+              fill
+            />
+          </figure>
           <h1 className='text-2xl md:text-3xl font-semibold '>
             {currentCourseInfo.title}
           </h1>

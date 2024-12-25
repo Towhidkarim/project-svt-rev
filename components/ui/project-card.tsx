@@ -24,13 +24,13 @@ export default function ProjectCard({
 }: (typeof courseInfo)[0]) {
   return (
     <Card className='rounded-lg border min-h-[500px] shadow-lg hover:scale-[102%] duration-300 transition max-w-[375px] flex flex-col justify-between w-full'>
-      <CardHeader className=' h-[350px] px-0  mx-0 pt-0 relative'>
-        <figure className='relative h-[300px]  w-full'>
+      <CardHeader className=' h-[350px] px-0 mx-0 pt-0 relative'>
+        <figure className='relative h-[250px]  w-full'>
           <Image
             src={imageUrl !== '' ? imageUrl : getRandomImage()}
             alt={title}
             loading='lazy'
-            className='object-cover rounded-t-lg'
+            className='object-cover h-[240px] rounded-t-lg'
             fill
           />
         </figure>
