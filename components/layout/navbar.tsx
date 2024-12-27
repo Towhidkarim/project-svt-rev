@@ -208,7 +208,10 @@ export const Navbar = () => {
               <DropdownMenuContent className='absolute  left-1/2 -translate-x-1/3 rounded-xl'>
                 <div className='flex flex-row gap-10 mx-10 '>
                   {groupedItems.map((item, index) => (
-                    <div key={index} className='flex flex-col'>
+                    <div
+                      key={index}
+                      className='flex flex-col max-w-[98svw] flex-wrap'
+                    >
                       <h1 className='text-base my-4 font-semibold'>
                         {item.category}
                       </h1>

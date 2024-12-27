@@ -88,13 +88,13 @@ export default function Page({
               fill
             />
           </figure>
-          <h1 className='text-2xl md:text-3xl font-semibold '>
+          <h1 className='text-2xl md:text-3xl font-extrabold '>
             {currentCourseInfo.title}
           </h1>
-          <h2 className='text-2xl text-muted-foreground md:text-xl font-semibold'>
+          <h2 className='text-2xl text-muted-foreground md:text-xl font-bold'>
             {currentCourseInfo.subTitle}
           </h2>
-          <div className='py-10 text-muted-foreground font-light'>
+          <div className='py-10 text-muted-foreground font-semibold'>
             <p className='py-5'>{currentCourseInfo.caption}</p>
             <ul className='list-disc ml-8'>
               {currentCourseInfo.suitedFor.map((item, index) => (
