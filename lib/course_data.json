@@ -288,5 +288,28 @@
     "duration": "",
     "entryRequirements": "",
     "why": ""
+  },
+  {
+    "category": "Construction Course",
+    "courseUniqueId": "18",
+    "imageUrl": "/construction.jpg",
+    "title": "Green CSCS Labourer Card Course",
+    "subTitle": "CSCS Green Card Course for Labourers ",
+    "caption": "The first step to entering the construction sector is to finish a Green CSCS Labourer Card training course right now. Select between a self-paced online course that you can do from the comfort of your home or an in-person classroom course.",
+    "courseDetails": "You will obtain a certificate for a Level 1 Award in Health and Safety in a Construction Environment upon finishing the CITB Health and Safety Awareness Training Course and passing the multiple-choice test.Successful candidates will also be eligible to get a Green Construction Skills Certificate Scheme (CSCS) Laborer Card.",
+    "suitedFor": [
+      "Anyone working on a construction site must demonstrate that they have the necessary training and credentials to perform their job safely.Employers and the general public can see that you have completed the training required to operate in the construction industry professionally if you have a Green CSCS Labourer Card."
+    ],
+    "forYouIf": [],
+    "booking": false,
+    "covers": "Full access to our TfL SERU online mock tests including multiple choice and drag & drop questions just like the real TfL SERU assessment. You will be able to access the mock test 24/7 and on any device including your mobile phone.  Real TfL SERU Questions.  Timed mock test.  24/7 Access.  Works on PC or Mobile Device.  4 Attempt.",
+    "courseStructure": "",
+
+    "pricing": "£125.00",
+    "priceInCurrency": 125.0,
+    "assesment": "Book your course and get access to your online learning content. When ready, appear for the exam.",
+    "duration": "1 Day",
+    "entryRequirements": "16+ years old, right to work in the UK ",
+    "why": "Obtaining a Green CSCS Labourer Card "
   }
 ]
